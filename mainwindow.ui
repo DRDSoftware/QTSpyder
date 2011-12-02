@@ -33,24 +33,24 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionRipristina_impostazioni_di_default"/>
+    <addaction name="actionRestoreDefaultConfig"/>
     <addaction name="separator"/>
-    <addaction name="actionEsci"/>
+    <addaction name="actionQuit"/>
    </widget>
    <widget class="QMenu" name="menu">
     <property name="title">
      <string>?</string>
     </property>
-    <addaction name="actionA_proposito_di"/>
+    <addaction name="actionAbout"/>
    </widget>
    <widget class="QMenu" name="menuCamera">
     <property name="title">
      <string>Camera</string>
     </property>
-    <addaction name="actionConnetti"/>
-    <addaction name="actionDisconnetti"/>
+    <addaction name="actionConnect"/>
+    <addaction name="actionDisconnect"/>
     <addaction name="separator"/>
-    <addaction name="actionCattura_immagine"/>
+    <addaction name="actionAcquireImage"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuCamera"/>
@@ -65,7 +65,7 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="actionEsci">
+  <action name="actionQuit">
    <property name="text">
     <string>Esci</string>
    </property>
@@ -73,27 +73,30 @@
     <string>Ctrl+Q</string>
    </property>
   </action>
-  <action name="actionA_proposito_di">
+  <action name="actionAbout">
    <property name="text">
-    <string>A proposito di...</string>
+    <string>Informazioni su...</string>
+   </property>
+   <property name="toolTip">
+    <string>Informazioni su questo programma</string>
    </property>
   </action>
-  <action name="actionConnetti">
+  <action name="actionConnect">
    <property name="text">
     <string>Connetti...</string>
    </property>
   </action>
-  <action name="actionDisconnetti">
+  <action name="actionDisconnect">
    <property name="text">
     <string>Disconnetti</string>
    </property>
   </action>
-  <action name="actionCattura_immagine">
+  <action name="actionAcquireImage">
    <property name="text">
     <string>Cattura immagine...</string>
    </property>
   </action>
-  <action name="actionRipristina_impostazioni_di_default">
+  <action name="actionRestoreDefaultConfig">
    <property name="text">
     <string>Ripristina impostazioni di default</string>
    </property>
@@ -103,7 +106,7 @@
  <resources/>
  <connections>
   <connection>
-   <sender>actionEsci</sender>
+   <sender>actionQuit</sender>
    <signal>activated()</signal>
    <receiver>QTSpyderMainWindow</receiver>
    <slot>close()</slot>

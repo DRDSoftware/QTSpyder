@@ -18,7 +18,7 @@ public:
     ~QTSpyderMainWindow();
 
 private slots:
-    void on_actionA_proposito_di_triggered();
+    void on_actionAbout_triggered();
 
 protected:
     void ShowAbout();

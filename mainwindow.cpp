@@ -42,7 +42,7 @@ void QTSpyderMainWindow::ShowWizard()
     wizard->Show();
 }
 
-void QTSpyderMainWindow::on_actionA_proposito_di_triggered()
+void QTSpyderMainWindow::on_actionAbout_triggered()
 {
     ShowAbout();
 }

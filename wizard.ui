@@ -91,7 +91,7 @@ p, li { white-space: pre-wrap; }
     <string>Connessione a una telecamera...</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="wizardCerca">
+  <widget class="QPushButton" name="wizardFind">
    <property name="geometry">
     <rect>
      <x>270</x>
