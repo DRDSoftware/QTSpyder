@@ -4,16 +4,16 @@
 #include <QDialog>
 
 namespace Ui {
-    class QTSpyderWizard;
+    class Wizard1;
 }
 
-class QTSpyderWizard : public QDialog
+class Wizard1 : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit QTSpyderWizard(QWidget *parent = 0);
-    ~QTSpyderWizard();
+    explicit Wizard1(QWidget *parent = 0);
+    ~Wizard1();
 
     // Mostra il Wizard di connessione alla telecamera
     void Show();
@@ -22,7 +22,7 @@ public:
     void UnShow();
 
 private slots:
-    void on_wizardCerca_clicked();
+    void on_wizardFind_clicked();
 
     void on_wizardList_itemSelectionChanged();
 
@@ -31,7 +31,7 @@ private slots:
     void on_buttonBox_rejected();
 
 private:
-    Ui::QTSpyderWizard *ui;
+    Ui::Wizard1 *ui;
 };
 
 #endif // QTSPYDERWIZARD_H
