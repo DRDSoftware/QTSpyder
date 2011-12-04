@@ -1,24 +1,24 @@
 #include "about.h"
 #include "ui_about.h"
 
-QTSpyderAbout::QTSpyderAbout(QWidget *parent) :
+About::About(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::QTSpyderAbout)
+    ui(new Ui::About)
 {
     ui->setupUi(this);
 }
 
-QTSpyderAbout::~QTSpyderAbout()
+About::~About()
 {
     delete ui;
 }
 
-void QTSpyderAbout::Show()
+void About::Show()
 {
     this->setVisible(true);
 }
 
-void QTSpyderAbout::UnShow()
+void About::UnShow()
 {
     this->setVisible(false);
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>QTSpyderAbout</class>
- <widget class="QDialog" name="QTSpyderAbout">
+ <class>About</class>
+ <widget class="QDialog" name="About">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -84,7 +84,7 @@ p, li { white-space: pre-wrap; }
   <connection>
    <sender>aboutOK</sender>
    <signal>clicked()</signal>
-   <receiver>QTSpyderAbout</receiver>
+   <receiver>About</receiver>
    <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">

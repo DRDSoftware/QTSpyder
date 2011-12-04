@@ -4,16 +4,16 @@
 #include <QDialog>
 
 namespace Ui {
-    class QTSpyderAbout;
+    class About;
 }
 
-class QTSpyderAbout : public QDialog
+class About : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit QTSpyderAbout(QWidget *parent = 0);
-    ~QTSpyderAbout();
+    explicit About(QWidget *parent = 0);
+    ~About();
 
     // Mostra la finestra
     void Show();
@@ -22,7 +22,7 @@ public:
     void UnShow();
 
 private:
-    Ui::QTSpyderAbout *ui;
+    Ui::About *ui;
 };
 
 #endif // QTSPYDERABOUT_H

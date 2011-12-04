@@ -11,19 +11,31 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-    wizard.cpp \
     mainwindow.cpp \
-    about.cpp
+    about.cpp \
+    wizard_1.cpp \
+    wizard_2.cpp
 
 HEADERS  += \
-    wizard.h \
     mainwindow.h \
-    about.h
+    about.h \
+    wizard_1.h \
+    wizard_2.h
 
 FORMS    += \
-    wizard.ui \
     mainwindow.ui \
-    about.ui
+    about.ui \
+    wizard_1.ui \
+    wizard_2.ui
+
+
+
+
+
+
+
+
+
 
 
 

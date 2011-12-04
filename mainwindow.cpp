@@ -1,48 +1,62 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-QTSpyderMainWindow::QTSpyderMainWindow(QWidget *parent) :
+MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::QTSpyderMainWindow)
+    ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     this->setWindowState(Qt::WindowMaximized);
     about = NULL;
-    wizard = NULL;
+    wizard_1 = NULL;
+    wizard_2 = NULL;
 }
 
-QTSpyderMainWindow::~QTSpyderMainWindow()
+MainWindow::~MainWindow()
 {
     if(about!=NULL)
     {
         delete about;
     }
-    if(wizard!=NULL)
+    if(wizard_1!=NULL)
     {
-        delete wizard;
+        delete wizard_1;
+    }
+    if(wizard_2!=NULL)
+    {
+        delete wizard_2;
     }
     delete ui;
 }
 
-void QTSpyderMainWindow::ShowAbout()
+void MainWindow::ShowAbout()
 {
     if(about==NULL)
     {
-        about = new QTSpyderAbout(this);
+        about = new About(this);
     }
     about->Show();
 }
 
-void QTSpyderMainWindow::ShowWizard()
+void MainWindow::ShowWizard1()
 {
-    if(wizard==NULL)
+    if(wizard_1==NULL)
     {
-        wizard = new QTSpyderWizard(this);
+        wizard_1 = new Wizard1(this);
     }
-    wizard->Show();
+    wizard_1->Show();
 }
 
-void QTSpyderMainWindow::on_actionAbout_triggered()
+void MainWindow::ShowWizard2()
+{
+    if(wizard_2==NULL)
+    {
+        wizard_2 = new Wizard2(this);
+    }
+    //wizard_2->Show();
+}
+
+void MainWindow::on_actionAbout_triggered()
 {
     ShowAbout();
 }
