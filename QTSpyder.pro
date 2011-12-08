@@ -28,6 +28,10 @@ FORMS    += \
     wizard_1.ui \
     wizard_2.ui
 
+RESOURCES += \
+    gpl3.qrc
+
+
 
 
 
