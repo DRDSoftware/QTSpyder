@@ -20,6 +20,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMessageBox>
+#include <QtGui/QCloseEvent>
 #include <about.h>
 #include <wizard_1.h>
 #include <wizard_2.h>
@@ -37,19 +39,44 @@ public:
     ~MainWindow();
 
 private slots:
+    /// Action to be executed when the
+    /// About menu option is triggered
     void on_actionAbout_triggered();
 
 protected:
+    /// Lock the UI of the window
+    void LockMe();
+    /// Unlock the UI of the window
+    void UnLockMe();
+
+    /// Show the About/Splash window
     void ShowAbout();
+    /// Show the first pass of the Wizard
     void ShowWizard1();
+    /// Show the second pass of the Wizard
     void ShowWizard2();
 
+    /// Override the default Close event
+    void closeEvent(QCloseEvent *event);
+    /// Save and Exit the program
+    bool SaveAndExit();
 private:
-
+    /// The main window of the program
     Ui::MainWindow *ui;
+    /// About/Splash window
     About *about;
+    /// First pass of the Wizard
     Wizard1 *wizard_1;
+    /// Second pass of the Wizard
     Wizard2 *wizard_2;
+
+    /// A small MessageBox asking if the
+    /// user want to exit the application
+    QMessageBox *quit;
+    /// A small MessageBox asking if the
+    /// user want to exit the application
+    /// or if he want to save before
+    QMessageBox *saveAndQuit;
 };
 
 #endif // MAINWINDOW_H

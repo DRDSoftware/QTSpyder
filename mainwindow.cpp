@@ -31,6 +31,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ShowAbout();
     wizard_1 = NULL;
     wizard_2 = NULL;
+    quit = NULL;
+    saveAndQuit = NULL;
 }
 
 MainWindow::~MainWindow()
@@ -47,7 +49,25 @@ MainWindow::~MainWindow()
     {
         delete wizard_2;
     }
+    if(quit!=NULL)
+    {
+        delete quit;
+    }
+    if(saveAndQuit!=NULL)
+    {
+        delete saveAndQuit;
+    }
     delete ui;
+}
+
+void MainWindow::LockMe()
+{
+    this->setEnabled(false);
+}
+
+void MainWindow::UnLockMe()
+{
+    this->setEnabled(true);
 }
 
 void MainWindow::ShowAbout()
@@ -80,4 +100,43 @@ void MainWindow::ShowWizard2()
 void MainWindow::on_actionAbout_triggered()
 {
     ShowAbout();
+}
+
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    if(SaveAndExit()==true)
+    {
+        event->accept();
+    }
+    else
+    {
+        event->ignore();
+    }
+}
+
+bool MainWindow::SaveAndExit()
+{
+    if(saveAndQuit==NULL)
+    {
+        saveAndQuit = new QMessageBox();
+        saveAndQuit->setText(tr("The configuration has changed."));
+        saveAndQuit->setInformativeText(tr("Do you want to save your changes?"));
+        saveAndQuit->setStandardButtons(QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel);
+        saveAndQuit->setDefaultButton(QMessageBox::Save);
+    }
+    int ret = saveAndQuit->exec();
+    switch(ret)
+    {
+        case QMessageBox::Save:
+            /// \todo Save the configuration
+            return true;
+            break;
+        case QMessageBox::Discard:
+            return true;
+            break;
+        case QMessageBox::Cancel:
+        default:
+            break;
+    }
+    return false;
 }
