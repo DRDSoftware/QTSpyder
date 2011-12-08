@@ -26,6 +26,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     this->setWindowState(Qt::WindowMaximized);
     about = NULL;
+    /// \todo This should only be done if the user requested
+    ///       the window to be shown at every boot
+    ShowAbout();
     wizard_1 = NULL;
     wizard_2 = NULL;
 }
