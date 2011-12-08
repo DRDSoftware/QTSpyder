@@ -29,7 +29,9 @@ FORMS    += \
     wizard_2.ui
 
 RESOURCES += \
-    gpl3.qrc
+    gpl3.qrc \
+    spyder3image.qrc
+
 
 
 
