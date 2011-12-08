@@ -20,6 +20,7 @@
 #define WIZARD_2_H
 
 #include <QDialog>
+#include <QMessageBox>
 
 namespace Ui {
     class Wizard2;
@@ -33,8 +34,22 @@ public:
     explicit Wizard2(QWidget *parent = 0);
     ~Wizard2();
 
+    // Show the second pass of the Wizard
+    void Show();
+
+    // Hide the second pass of the Wizard
+    void UnShow();
+
+    // Exit the Wizard
+    void Exit();
+
+private slots:
+    void on_wizard2Exit_clicked();
+
 private:
     Ui::Wizard2 *ui;
+
+    QMessageBox *quit;
 };
 
 #endif // WIZARD_2_H

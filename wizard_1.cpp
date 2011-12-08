@@ -24,10 +24,16 @@ Wizard1::Wizard1(QWidget *parent) :
     ui(new Ui::Wizard1)
 {
     ui->setupUi(this);
+
+    quit = NULL;
 }
 
 Wizard1::~Wizard1()
 {
+    if(quit!=NULL)
+    {
+        delete quit;
+    }
     delete ui;
 }
 
@@ -41,22 +47,29 @@ void Wizard1::UnShow()
     this->setVisible(false);
 }
 
-void Wizard1::on_wizardFind_clicked()
+void Wizard1::Exit()
 {
-    /// \todo Connection to the Find of the Core
+    if(quit==NULL)
+    {
+        quit = new QMessageBox();
+        quit->setText(tr("The Wizard didn't finish yet."));
+        quit->setInformativeText(tr("Do you want to quit the Wizard?"));
+        quit->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+        quit->setDefaultButton(QMessageBox::No);
+    }
+    int ret = quit->exec();
+    switch(ret)
+    {
+        case QMessageBox::Yes:
+            UnShow();
+            break;
+        case QMessageBox::No:
+        default:
+            break;
+    }
 }
 
-void Wizard1::on_wizardList_itemSelectionChanged()
+void Wizard1::on_wizard1Exit_clicked()
 {
-    /// \todo Save the selected camera
-}
-
-void Wizard1::on_buttonBox_accepted()
-{
-    /// \todo Check if a camera is selected and connect
-}
-
-void Wizard1::on_buttonBox_rejected()
-{
-    /// \todo Close the window and terminate the search in progress
+    Exit();
 }

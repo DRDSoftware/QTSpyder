@@ -24,9 +24,52 @@ Wizard2::Wizard2(QWidget *parent) :
     ui(new Ui::Wizard2)
 {
     ui->setupUi(this);
+
+    quit = NULL;
 }
 
 Wizard2::~Wizard2()
 {
+    if(quit!=NULL)
+    {
+        delete quit;
+    }
     delete ui;
+}
+
+void Wizard2::Show()
+{
+    this->setVisible(true);
+}
+
+void Wizard2::UnShow()
+{
+    this->setVisible(false);
+}
+
+void Wizard2::Exit()
+{
+    if(quit==NULL)
+    {
+        quit = new QMessageBox();
+        quit->setText(tr("The Wizard didn't finish yet."));
+        quit->setInformativeText(tr("Do you want to quit the Wizard?"));
+        quit->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+        quit->setDefaultButton(QMessageBox::No);
+    }
+    int ret = quit->exec();
+    switch(ret)
+    {
+        case QMessageBox::Yes:
+            UnShow();
+            break;
+        case QMessageBox::No:
+        default:
+            break;
+    }
+}
+
+void Wizard2::on_wizard2Exit_clicked()
+{
+    Exit();
 }

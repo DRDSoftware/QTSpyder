@@ -20,6 +20,7 @@
 #define WIZARD_1_H
 
 #include <QDialog>
+#include <QMessageBox>
 
 namespace Ui {
     class Wizard1;
@@ -33,23 +34,22 @@ public:
     explicit Wizard1(QWidget *parent = 0);
     ~Wizard1();
 
-    // Show the camera connection Wizard
+    // Show the first pass of the Wizard
     void Show();
 
-    // Hide the camera connection Wizard
+    // Hide the first pass of the Wizard
     void UnShow();
 
+    // Exit the Wizard
+    void Exit();
+
 private slots:
-    void on_wizardFind_clicked();
-
-    void on_wizardList_itemSelectionChanged();
-
-    void on_buttonBox_accepted();
-
-    void on_buttonBox_rejected();
+    void on_wizard1Exit_clicked();
 
 private:
     Ui::Wizard1 *ui;
+
+    QMessageBox *quit;
 };
 
 #endif // WIZARD_1_H
