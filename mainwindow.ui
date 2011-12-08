@@ -19,6 +19,9 @@
   <property name="windowTitle">
    <string>QTSpyder</string>
   </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
   <widget class="QWidget" name="centralWidget"/>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -67,7 +70,7 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionQuit">
    <property name="text">
-    <string>Esci</string>
+    <string>Exit</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Q</string>
@@ -75,7 +78,7 @@
   </action>
   <action name="actionAbout">
    <property name="text">
-    <string>Informazioni su...</string>
+    <string>About QTSpyder...</string>
    </property>
    <property name="toolTip">
     <string>Informazioni su questo programma</string>
@@ -83,22 +86,22 @@
   </action>
   <action name="actionConnect">
    <property name="text">
-    <string>Connetti...</string>
+    <string>Connect...</string>
    </property>
   </action>
   <action name="actionDisconnect">
    <property name="text">
-    <string>Disconnetti</string>
+    <string>Disconnect</string>
    </property>
   </action>
   <action name="actionAcquireImage">
    <property name="text">
-    <string>Cattura immagine...</string>
+    <string>Capture image...</string>
    </property>
   </action>
   <action name="actionRestoreDefaultConfig">
    <property name="text">
-    <string>Ripristina impostazioni di default</string>
+    <string>Restore to default settings</string>
    </property>
   </action>
  </widget>
@@ -107,7 +110,7 @@
  <connections>
   <connection>
    <sender>actionQuit</sender>
-   <signal>activated()</signal>
+   <signal>triggered()</signal>
    <receiver>MainWindow</receiver>
    <slot>close()</slot>
    <hints>
@@ -116,8 +119,8 @@
      <y>-1</y>
     </hint>
     <hint type="destinationlabel">
-     <x>511</x>
-     <y>383</y>
+     <x>399</x>
+     <y>299</y>
     </hint>
    </hints>
   </connection>

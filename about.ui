@@ -25,6 +25,9 @@
   <property name="windowTitle">
    <string>Informazioni su...</string>
   </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -34,6 +37,9 @@
         <font>
          <pointsize>20</pointsize>
         </font>
+       </property>
+       <property name="locale">
+        <locale language="English" country="UnitedStates"/>
        </property>
        <property name="text">
         <string notr="true">QTSpyder</string>
@@ -64,6 +70,9 @@ p, li { white-space: pre-wrap; }
      </item>
      <item>
       <widget class="QLabel" name="aboutBy">
+       <property name="locale">
+        <locale language="English" country="UnitedStates"/>
+       </property>
        <property name="text">
         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -118,6 +127,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QPushButton" name="aboutOK">
+         <property name="locale">
+          <locale language="English" country="UnitedStates"/>
+         </property>
          <property name="text">
           <string>OK</string>
          </property>
