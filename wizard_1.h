@@ -16,8 +16,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef QTSPYDERWIZARD_H
-#define QTSPYDERWIZARD_H
+#ifndef WIZARD_1_H
+#define WIZARD_1_H
 
 #include <QDialog>
 
@@ -33,10 +33,10 @@ public:
     explicit Wizard1(QWidget *parent = 0);
     ~Wizard1();
 
-    // Mostra il Wizard di connessione alla telecamera
+    // Show the camera connection Wizard
     void Show();
 
-    // Nasconde il Wizard di connessione alla telecamera
+    // Hide the camera connection Wizard
     void UnShow();
 
 private slots:
@@ -52,4 +52,4 @@ private:
     Ui::Wizard1 *ui;
 };
 
-#endif // QTSPYDERWIZARD_H
+#endif // WIZARD_1_H

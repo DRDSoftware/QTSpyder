@@ -16,8 +16,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef QTSPYDERMAINWINDOW_H
-#define QTSPYDERMAINWINDOW_H
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
 
 #include <QMainWindow>
 #include <about.h>
@@ -52,4 +52,4 @@ private:
     Wizard2 *wizard_2;
 };
 
-#endif // QTSPYDERMAINWINDOW_H
+#endif // MAINWINDOW_H

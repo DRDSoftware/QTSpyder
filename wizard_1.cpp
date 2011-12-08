@@ -43,20 +43,20 @@ void Wizard1::UnShow()
 
 void Wizard1::on_wizardFind_clicked()
 {
-    /// \todo Collegamento alla cerca del core
+    /// \todo Connection to the Find of the Core
 }
 
 void Wizard1::on_wizardList_itemSelectionChanged()
 {
-    /// \todo Salvataggio della telecamera selezionata
+    /// \todo Save the selected camera
 }
 
 void Wizard1::on_buttonBox_accepted()
 {
-    /// \todo Controllare che ci sia una telecamera selezionata e fare la Connect
+    /// \todo Check if a camera is selected and connect
 }
 
 void Wizard1::on_buttonBox_rejected()
 {
-    /// \todo Chiudere la finestra e annullare la ricerca in corso
+    /// \todo Close the window and terminate the search in progress
 }

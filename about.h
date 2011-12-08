@@ -16,8 +16,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef QTSPYDERABOUT_H
-#define QTSPYDERABOUT_H
+#ifndef ABOUT_H
+#define ABOUT_H
 
 #include <QDialog>
 
@@ -33,14 +33,14 @@ public:
     explicit About(QWidget *parent = 0);
     ~About();
 
-    // Mostra la finestra
+    // Show the About window
     void Show();
 
-    // Nasconde la finestra
+    // Hide the About window
     void UnShow();
 
 private:
     Ui::About *ui;
 };
 
-#endif // QTSPYDERABOUT_H
+#endif // ABOUT_H
