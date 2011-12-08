@@ -39,6 +39,10 @@ public:
     // Hide the About window
     void UnShow();
 
+private slots:
+
+    void on_aboutOK_clicked();
+
 private:
     Ui::About *ui;
 };

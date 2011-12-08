@@ -40,3 +40,9 @@ void About::UnShow()
 {
     this->setVisible(false);
 }
+
+void About::on_aboutOK_clicked()
+{
+    /// \todo Save the onBoot setting
+    UnShow();
+}
