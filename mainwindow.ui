@@ -81,7 +81,7 @@
     <string>About QTSpyder...</string>
    </property>
    <property name="toolTip">
-    <string>Informazioni su questo programma</string>
+    <string>About this program</string>
    </property>
   </action>
   <action name="actionConnect">

@@ -6,10 +6,10 @@
     <message>
         <location filename="about.ui" line="26"/>
         <source>Informazioni su...</source>
-        <translation></translation>
+        <translation>About QTSpider...</translation>
     </message>
     <message>
-        <location filename="about.ui" line="57"/>
+        <location filename="about.ui" line="63"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -22,7 +22,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;An easy to use interface to use the DALSA Spyder3 1k, 36 kHz GigE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="about.ui" line="68"/>
+        <location filename="about.ui" line="77"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -35,17 +35,17 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;by &lt;/span&gt;&lt;a href=&quot;http://www.drdsoftware.eu/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;DRDSoftware&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="about.ui" line="96"/>
+        <location filename="about.ui" line="105"/>
         <source>qrc:/gpl-3.0.html</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="about.ui" line="112"/>
+        <location filename="about.ui" line="121"/>
         <source>Show this the next time the program starts</source>
         <translation>Show this the next time the program starts</translation>
     </message>
     <message>
-        <location filename="about.ui" line="122"/>
+        <location filename="about.ui" line="134"/>
         <source>OK</source>
         <translation></translation>
     </message>
@@ -55,73 +55,83 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="mainwindow.ui" line="20"/>
         <source>QTSpyder</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="34"/>
+        <location filename="mainwindow.ui" line="37"/>
         <source>File</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="42"/>
+        <location filename="mainwindow.ui" line="45"/>
         <source>?</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="48"/>
+        <location filename="mainwindow.ui" line="51"/>
         <source>Camera</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="70"/>
-        <source>Esci</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="mainwindow.ui" line="73"/>
-        <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="78"/>
-        <source>Informazioni su...</source>
-        <translation type="unfinished"></translation>
+        <source>Exit</source>
+        <translation>Exit</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="81"/>
-        <source>Informazioni su questo programma</source>
-        <translation type="unfinished"></translation>
+        <source>About QTSpyder...</source>
+        <translation>About QTSpyder...</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="86"/>
-        <source>Connetti...</source>
-        <translation type="unfinished"></translation>
+        <location filename="mainwindow.ui" line="84"/>
+        <source>About this program</source>
+        <translation>About this program</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="91"/>
-        <source>Disconnetti</source>
-        <translation type="unfinished"></translation>
+        <location filename="mainwindow.ui" line="89"/>
+        <source>Connect...</source>
+        <translation>Connect...</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="96"/>
-        <source>Cattura immagine...</source>
-        <translation type="unfinished"></translation>
+        <location filename="mainwindow.ui" line="94"/>
+        <source>Disconnect</source>
+        <translation>Disconnect</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="101"/>
-        <source>Ripristina impostazioni di default</source>
-        <translation type="unfinished"></translation>
+        <location filename="mainwindow.ui" line="99"/>
+        <source>Capture image...</source>
+        <translation>Capture image...</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="104"/>
+        <source>Restore to default settings</source>
+        <translation>Restore to default settings</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="76"/>
+        <source>Ctrl+Q</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="122"/>
+        <source>The configuration has changed.</source>
+        <translation>The configuration has changed.</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="123"/>
+        <source>Do you want to save your changes?</source>
+        <translation>Do you want to save your changes?</translation>
     </message>
 </context>
 <context>
     <name>Wizard1</name>
     <message>
         <location filename="wizard_1.ui" line="26"/>
-        <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <source>Wizard Pass 1 of 2: Connection to the camera...</source>
+        <translation>Wizard pass 1 of 2: Connection to the camera...</translation>
     </message>
     <message>
-        <location filename="wizard_1.ui" line="79"/>
+        <location filename="wizard_1.ui" line="82"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -134,12 +144,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Image source: &lt;/span&gt;&lt;a href=&quot;http://teledynedalsa.com/mv/products/cameras/family.aspx?fam=Spyder3&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline; color:#0000ff;&quot;&gt;DALSA Website&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="wizard_1.ui" line="141"/>
+        <location filename="wizard_1.ui" line="144"/>
         <source>Connection to the camera...</source>
         <translation>Connection to the camera...</translation>
     </message>
     <message>
-        <location filename="wizard_1.ui" line="164"/>
+        <location filename="wizard_1.ui" line="167"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -172,25 +182,35 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.drdsoftware.eu/&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline; color:#0000ff;&quot;&gt;DRDSoftware&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="wizard_1.ui" line="223"/>
+        <location filename="wizard_1.ui" line="226"/>
         <source>Next</source>
         <translation>Next</translation>
     </message>
     <message>
-        <location filename="wizard_1.ui" line="233"/>
+        <location filename="wizard_1.ui" line="236"/>
         <source>Exit</source>
         <translation>Exit</translation>
+    </message>
+    <message>
+        <location filename="wizard_1.cpp" line="55"/>
+        <source>The Wizard didn&apos;t finish yet.</source>
+        <translation>The Wizard didn&apos;t finish yet.</translation>
+    </message>
+    <message>
+        <location filename="wizard_1.cpp" line="56"/>
+        <source>Do you want to quit the Wizard?</source>
+        <translation>Do you want to quit the Wizard?</translation>
     </message>
 </context>
 <context>
     <name>Wizard2</name>
     <message>
         <location filename="wizard_2.ui" line="26"/>
-        <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <source>Wizard Pass 2 of 2: Select one camera...</source>
+        <translation>Wizard pass 2 of 2: Select one camera...</translation>
     </message>
     <message>
-        <location filename="wizard_2.ui" line="76"/>
+        <location filename="wizard_2.ui" line="79"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -203,12 +223,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Image source: &lt;/span&gt;&lt;a href=&quot;http://teledynedalsa.com/mv/products/cameras/family.aspx?fam=Spyder3&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline; color:#0000ff;&quot;&gt;DALSA Website&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="wizard_2.ui" line="141"/>
+        <location filename="wizard_2.ui" line="144"/>
         <source>Select one camera...</source>
         <translation>Select one camera...</translation>
     </message>
     <message>
-        <location filename="wizard_2.ui" line="164"/>
+        <location filename="wizard_2.ui" line="167"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -229,29 +249,39 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;When the list of cameras appears in the box, select the camera to use and press &amp;quot;Connect&amp;quot; to start using QTSpyder.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="wizard_2.ui" line="259"/>
+        <location filename="wizard_2.ui" line="262"/>
         <source>Find cameras</source>
         <translation>Find cameras</translation>
     </message>
     <message>
-        <location filename="wizard_2.ui" line="282"/>
+        <location filename="wizard_2.ui" line="285"/>
         <source>Cancel</source>
         <translation>Cancel</translation>
     </message>
     <message>
-        <location filename="wizard_2.ui" line="339"/>
+        <location filename="wizard_2.ui" line="342"/>
         <source>Status:</source>
         <translation>Status:</translation>
     </message>
     <message>
-        <location filename="wizard_2.ui" line="366"/>
+        <location filename="wizard_2.ui" line="381"/>
         <source>Connect</source>
         <translation>Connect</translation>
     </message>
     <message>
-        <location filename="wizard_2.ui" line="373"/>
+        <location filename="wizard_2.ui" line="388"/>
         <source>Exit</source>
         <translation>Exit</translation>
+    </message>
+    <message>
+        <location filename="wizard_2.cpp" line="55"/>
+        <source>The Wizard didn&apos;t finish yet.</source>
+        <translation>The Wizard didn&apos;t finish yet.</translation>
+    </message>
+    <message>
+        <location filename="wizard_2.cpp" line="56"/>
+        <source>Do you want to quit the Wizard?</source>
+        <translation>Do you want to quit the Wizard?</translation>
     </message>
 </context>
 </TS>
