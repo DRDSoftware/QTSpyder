@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/locales">
+        <file>qtspyder_en_US.qm</file>
+        <file>qtspyder_it_IT.qm</file>
+    </qresource>
+</RCC>

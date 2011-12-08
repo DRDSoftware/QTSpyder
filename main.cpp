@@ -17,11 +17,30 @@
  */
 
 #include <QtGui/QApplication>
+#include <QTranslator>
+#include <QDebug>
 #include "mainwindow.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
+    QString locale = QLocale::system().name();
+
+    QTranslator translator;
+    if(translator.load(QString("qtspyder_") + locale, ":/locales")==false)
+    {
+        qDebug()<<"Unable to load locale for "<<locale<<" trying with en_US...";
+        if(translator.load("qtspyder_en_US", ":/locales")==false)
+        {
+            qDebug()<<"Unable to load locale en_US!!!";
+        }
+    }
+    else
+    {
+        a.installTranslator(&translator);
+    }
+
     MainWindow w;
     w.show();
 
