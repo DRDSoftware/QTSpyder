@@ -31,10 +31,12 @@ FORMS    += \
 RESOURCES += \
     gpl3.qrc \
     spyder3image.qrc \
-    locale.qrc
+    locale.qrc \
+    icons.qrc
 
 TRANSLATIONS = qtspyder_en_US.ts \
                 qtspyder_it_IT.ts
+
 
 
 
