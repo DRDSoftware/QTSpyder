@@ -58,67 +58,180 @@ p, li { white-space: pre-wrap; }
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="37"/>
+        <location filename="mainwindow.ui" line="265"/>
+        <source>Image Size</source>
+        <translation>Dimensione immagine</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="275"/>
+        <source>Distance from the left side (px)</source>
+        <translation>Distanza dal lato sinistro</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="296"/>
+        <source>Distance from the right side (px)</source>
+        <translation>Distanza dal lato destro</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="333"/>
+        <source>Immagine di un rettangolo qui</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="372"/>
+        <source>Height</source>
+        <translation>Altezza</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="475"/>
+        <source>Single capture</source>
+        <translation>Cattura singola</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="485"/>
+        <location filename="mainwindow.ui" line="545"/>
+        <source>Line fetching frequence (Hz)</source>
+        <translation>Frequenza di cattura delle linee</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="512"/>
+        <location filename="mainwindow.ui" line="652"/>
+        <source>Capture</source>
+        <translation>Cattura</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="537"/>
+        <location filename="mainwindow.ui" line="826"/>
+        <source>Continuous Capture</source>
+        <translation>Cattura continua</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="568"/>
+        <source>Capture time (s)</source>
+        <translation>Tempo di cattura (s)</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="580"/>
+        <source>Save output on disc</source>
+        <translation>Salva output su disco</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="587"/>
+        <source>Path</source>
+        <translation>Percorso</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="605"/>
+        <location filename="mainwindow.ui" line="637"/>
+        <source>...</source>
+        <translation>...</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="614"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Filename (the # character will become&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;                an increasing image number)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Nome file (il carattere #diventer&amp;agrave;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;                un numero di immagine incrementale)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="693"/>
+        <source>Camera status</source>
+        <translation>Status della camera</translation>
+    </message>
+    <message utf8="true">
+        <location filename="mainwindow.ui" line="701"/>
+        <source>Temperature [° C]:</source>
+        <translation>Temperatura [° C]:</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="708"/>
+        <location filename="mainwindow.ui" line="735"/>
+        <source>XX</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="728"/>
+        <source>Voltage [V]:</source>
+        <translation>Voltaggio [V]:</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="761"/>
         <source>File</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="45"/>
+        <location filename="mainwindow.ui" line="769"/>
         <source>?</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="51"/>
+        <location filename="mainwindow.ui" line="775"/>
         <source>Camera</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="73"/>
+        <location filename="mainwindow.ui" line="790"/>
         <source>Exit</source>
         <translation>Esci</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="81"/>
+        <location filename="mainwindow.ui" line="798"/>
         <source>About QTSpyder...</source>
         <translation>Informazioni su...</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="84"/>
+        <location filename="mainwindow.ui" line="801"/>
         <source>About this program</source>
         <translation>Informazioni su questo programma</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="89"/>
-        <source>Connect...</source>
-        <translation>Connetti...</translation>
+        <location filename="mainwindow.ui" line="806"/>
+        <source>Connection Wizard...</source>
+        <translation>Wizard di connessione...</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="94"/>
+        <location filename="mainwindow.ui" line="816"/>
+        <source>Single Capture</source>
+        <translation>Cattura singola</translation>
+    </message>
+    <message>
+        <source>Connect...</source>
+        <translation type="obsolete">Connetti...</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="811"/>
         <source>Disconnect</source>
         <translation>Disconnetti</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="99"/>
         <source>Capture image...</source>
-        <translation>Acquisisci immagine...</translation>
+        <translation type="obsolete">Acquisisci immagine...</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="104"/>
+        <location filename="mainwindow.ui" line="821"/>
         <source>Restore to default settings</source>
         <translation>Ripristina configurazione predefinita</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="76"/>
+        <location filename="mainwindow.ui" line="793"/>
         <source>Ctrl+Q</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="122"/>
+        <location filename="mainwindow.cpp" line="132"/>
         <source>The configuration has changed.</source>
         <translation>La configurazione è stata cambiata.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="123"/>
+        <location filename="mainwindow.cpp" line="133"/>
         <source>Do you want to save your changes?</source>
         <translation>Vuoi salvare le tue modifiche?</translation>
     </message>
