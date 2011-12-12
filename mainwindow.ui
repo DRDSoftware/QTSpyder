@@ -48,6 +48,9 @@
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
            <widget class="QPushButton" name="rotateLeft">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="minimumSize">
              <size>
               <width>48</width>
@@ -80,6 +83,9 @@
           </item>
           <item>
            <widget class="QPushButton" name="rotateRight">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="minimumSize">
              <size>
               <width>48</width>
@@ -112,6 +118,9 @@
           </item>
           <item>
            <widget class="QPushButton" name="saveCaptured">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="minimumSize">
              <size>
               <width>48</width>
@@ -144,6 +153,9 @@
           </item>
           <item>
            <widget class="QPushButton" name="deleteCaptured">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="minimumSize">
              <size>
               <width>48</width>
@@ -189,6 +201,9 @@
           </item>
           <item>
            <widget class="QPushButton" name="zoomIn">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="minimumSize">
              <size>
               <width>48</width>
@@ -221,6 +236,9 @@
           </item>
           <item>
            <widget class="QPushButton" name="zoomOut">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="minimumSize">
              <size>
               <width>48</width>
@@ -1158,8 +1176,25 @@ p, li { white-space: pre-wrap; }
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>actionConnect</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ShowWizard()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>ShowAbout()</slot>
+  <slot>ShowWizard()</slot>
  </slots>
 </ui>

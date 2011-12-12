@@ -43,6 +43,8 @@ private slots:
     /// About menu option is triggered
     void on_actionAbout_triggered();
 
+    void on_actionConnect_triggered();
+
 protected:
     /// Lock the UI of the window
     void LockMe();
@@ -51,10 +53,8 @@ protected:
 
     /// Show the About/Splash window
     void ShowAbout();
-    /// Show the first pass of the Wizard
-    void ShowWizard1();
-    /// Show the second pass of the Wizard
-    void ShowWizard2();
+    /// Show and handle the Wizard
+    void ShowWizard();
 
     /// Override the default Close event
     void closeEvent(QCloseEvent *event);
