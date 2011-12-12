@@ -62,6 +62,7 @@ void Wizard1::Exit()
     {
         case QMessageBox::Yes:
             UnShow();
+            this->reject();
             break;
         case QMessageBox::No:
         default:
