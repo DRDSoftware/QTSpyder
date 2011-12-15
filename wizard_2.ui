@@ -278,6 +278,9 @@ p, li { white-space: pre-wrap; }
            </item>
            <item>
             <widget class="QPushButton" name="wizard2Cancel">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="locale">
               <locale language="English" country="UnitedStates"/>
              </property>
@@ -377,6 +380,9 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QPushButton" name="wizard2Connect">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>Connect</string>
          </property>
