@@ -21,6 +21,7 @@
 
 #include <QDialog>
 #include <QMessageBox>
+#include <QModelIndex>
 
 namespace Ui {
     class Wizard2;
@@ -50,6 +51,8 @@ private slots:
     void on_wizard2Exit_clicked();
 
     void on_wizard2Connect_clicked();
+
+    void on_wizard2List_activated(const QModelIndex &index);
 
 private:
     Ui::Wizard2 *ui;

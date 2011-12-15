@@ -85,3 +85,8 @@ void Wizard2::on_wizard2Connect_clicked()
 {
     Connect();
 }
+
+void Wizard2::on_wizard2List_activated(const QModelIndex &index)
+{
+    ui->wizard2Connect->setEnabled(true);
+}
