@@ -1,3 +1,5 @@
 *.pro.user
 *.autosave
 *.qm
+contrib/include
+contrib/lib
