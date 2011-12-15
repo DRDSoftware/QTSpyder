@@ -62,6 +62,7 @@ void Wizard2::Exit()
     {
         case QMessageBox::Yes:
             UnShow();
+            this->reject();
             break;
         case QMessageBox::No:
         default:
@@ -69,7 +70,18 @@ void Wizard2::Exit()
     }
 }
 
+void Wizard2::Connect()
+{
+    /// \todo Connection to the camera
+    this->accept();
+}
+
 void Wizard2::on_wizard2Exit_clicked()
 {
     Exit();
+}
+
+void Wizard2::on_wizard2Connect_clicked()
+{
+    Connect();
 }

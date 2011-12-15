@@ -35,6 +35,7 @@ MainWindow::MainWindow(QWidget *parent) :
             qApp->desktop()->availableGeometry()
         ));
     this->setWindowState(Qt::WindowMaximized);
+    this->show();
     about = NULL;
     /// \todo This should only be done if the user requested
     ///       the window to be shown at every boot
@@ -86,42 +87,40 @@ void MainWindow::ShowAbout()
     {
         about = new About(this);
     }
-    about->Show();
+    //about->Show();
+    about->exec();
 }
 
-void MainWindow::ShowWizard1()
+void MainWindow::ShowWizard()
 {
+    int ret1, ret2;
+
     if(wizard_1==NULL)
     {
         wizard_1 = new Wizard1(this);
     }
-    wizard_1->Show();
-}
 
-void MainWindow::ShowWizard2()
-{
+    ret1 = wizard_1->exec();
+
+    if(ret1 != QDialog::Accepted)
+    {
+        return;
+    }
+
     if(wizard_2==NULL)
     {
         wizard_2 = new Wizard2(this);
     }
-    //wizard_2->Show();
-}
 
-void MainWindow::on_actionAbout_triggered()
-{
-    ShowAbout();
-}
+    ret2 = wizard_2->exec();
 
-void MainWindow::closeEvent(QCloseEvent *event)
-{
-    if(SaveAndExit()==true)
+    if(ret2 != QDialog::Accepted)
     {
-        event->accept();
+        return;
     }
-    else
-    {
-        event->ignore();
-    }
+
+    /// \todo Connection with the camera selected (how to receive which one was chosen?)
+    ///       Solution (?): make the connection in the Wizard and receive only the status here
 }
 
 bool MainWindow::SaveAndExit()
@@ -149,4 +148,26 @@ bool MainWindow::SaveAndExit()
             break;
     }
     return false;
+}
+
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    if(SaveAndExit()==true)
+    {
+        event->accept();
+    }
+    else
+    {
+        event->ignore();
+    }
+}
+
+void MainWindow::on_actionAbout_triggered()
+{
+    ShowAbout();
+}
+
+void MainWindow::on_actionConnect_triggered()
+{
+    ShowWizard();
 }

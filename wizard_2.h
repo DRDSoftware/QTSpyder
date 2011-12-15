@@ -43,8 +43,13 @@ public:
     // Exit the Wizard
     void Exit();
 
+    // Connect to the selected camera
+    void Connect();
+
 private slots:
     void on_wizard2Exit_clicked();
+
+    void on_wizard2Connect_clicked();
 
 private:
     Ui::Wizard2 *ui;
