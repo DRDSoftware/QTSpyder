@@ -70,6 +70,11 @@ void Wizard2::Exit()
     }
 }
 
+void Wizard2::Find()
+{
+    /// \todo Find all the cameras connected to the computer
+}
+
 void Wizard2::Connect()
 {
     /// \todo Connection to the camera
@@ -86,7 +91,12 @@ void Wizard2::on_wizard2Connect_clicked()
     Connect();
 }
 
-void Wizard2::on_wizard2List_activated(const QModelIndex &index)
+void Wizard2::on_wizard2Find_clicked()
+{
+    Find();
+}
+
+void Wizard2::on_wizard2List_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous)
 {
     ui->wizard2Connect->setEnabled(true);
 }

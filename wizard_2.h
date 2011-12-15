@@ -22,6 +22,7 @@
 #include <QDialog>
 #include <QMessageBox>
 #include <QModelIndex>
+#include <QListWidgetItem>
 
 namespace Ui {
     class Wizard2;
@@ -44,6 +45,9 @@ public:
     // Exit the Wizard
     void Exit();
 
+    // Find all the cameras connected
+    void Find();
+
     // Connect to the selected camera
     void Connect();
 
@@ -52,7 +56,9 @@ private slots:
 
     void on_wizard2Connect_clicked();
 
-    void on_wizard2List_activated(const QModelIndex &index);
+    void on_wizard2Find_clicked();
+
+    void on_wizard2List_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
 
 private:
     Ui::Wizard2 *ui;
