@@ -93,7 +93,12 @@ void Wizard2::on_wizard2Connect_clicked()
 
 void Wizard2::on_wizard2Find_clicked()
 {
+    // Enable the user to stop the Find operation
+    ui->wizard2Cancel->setEnabled(true);
+
     Find();
+
+    ui->wizard2Cancel->setEnabled(false);
 }
 
 void Wizard2::on_wizard2List_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous)
