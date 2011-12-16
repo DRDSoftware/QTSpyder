@@ -14,13 +14,15 @@ SOURCES += main.cpp\
     mainwindow.cpp \
     about.cpp \
     wizard_1.cpp \
-    wizard_2.cpp
+    wizard_2.cpp \
+    config.cpp
 
 HEADERS  += \
     mainwindow.h \
     about.h \
     wizard_1.h \
-    wizard_2.h
+    wizard_2.h \
+    config.h
 
 FORMS    += \
     mainwindow.ui \
