@@ -31,18 +31,17 @@ About::~About()
     delete ui;
 }
 
-void About::Show()
-{
-    this->setVisible(true);
-}
-
-void About::UnShow()
-{
-    this->setVisible(false);
-}
-
 void About::on_aboutOK_clicked()
 {
     /// \todo Save the onBoot setting
-    UnShow();
+    if(ui->aboutShowNextBoot->isChecked())
+    {
+        //UnShow();
+        this->accept();
+    }
+    else
+    {
+        //UnShow();
+        this->reject();
+    }
 }

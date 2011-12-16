@@ -52,6 +52,9 @@ protected:
     void UnLockMe();
 
     /// Show the About/Splash window
+    /// and set in the configuration
+    /// if the user want to see the
+    /// about window on startup
     void ShowAbout();
     /// Show and handle the Wizard
     void ShowWizard();

@@ -19,6 +19,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include "config.h"
+
 #include <QStyle>
 #include <QDesktopWidget>
 
@@ -36,10 +38,13 @@ MainWindow::MainWindow(QWidget *parent) :
         ));
     this->setWindowState(Qt::WindowMaximized);
     this->show();
+
     about = NULL;
-    /// \todo This should only be done if the user requested
-    ///       the window to be shown at every boot
-    ShowAbout();
+    if(Config::getMonoton()->getShowAbout()==true)
+    {
+        ShowAbout();
+    }
+
     wizard_1 = NULL;
     wizard_2 = NULL;
     quit = NULL;
@@ -87,8 +92,14 @@ void MainWindow::ShowAbout()
     {
         about = new About(this);
     }
-    //about->Show();
-    about->exec();
+    if(about->exec()==QDialog::Accepted)
+    {
+        Config::getMonoton()->setShowAbout(true);
+    }
+    else
+    {
+        Config::getMonoton()->setShowAbout(false);
+    }
 }
 
 void MainWindow::ShowWizard()
@@ -137,7 +148,7 @@ bool MainWindow::SaveAndExit()
     switch(ret)
     {
         case QMessageBox::Save:
-            /// \todo Save the configuration
+            Config::getMonoton()->SaveToFile("QTSpyder.cfg");
             return true;
             break;
         case QMessageBox::Discard:

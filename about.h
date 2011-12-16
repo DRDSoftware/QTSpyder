@@ -33,12 +33,6 @@ public:
     explicit About(QWidget *parent = 0);
     ~About();
 
-    // Show the About window
-    void Show();
-
-    // Hide the About window
-    void UnShow();
-
 private slots:
 
     void on_aboutOK_clicked();
