@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     //config.SaveToFile("QTSpyder.cfg");
     if(gbConfig.LoadFromFile("QTSpyder.cfg")!="")
     {
-        gbConfig.LoadDefoultValues();
+        gbConfig.LoadDefaultValues();
     }
 
     QString locale = QLocale::system().name();

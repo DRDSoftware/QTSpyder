@@ -13,13 +13,13 @@ public:
         my = NULL;
     }
 
-    /// Set the defoult value into the current configuration
+    /// Set the default values into the current configuration
     /// of the program
-    void LoadDefoultValues();
+    void LoadDefaultValues();
 
     /// Load the configuration of the program from a file
     /// \param name The configuration will read from this file
-    /// \return String with the errore message in case of error,
+    /// \return String with the error message in case of error,
     ///         an empty string in case of success
     QString LoadFromFile(const QString &name);
 
@@ -126,17 +126,17 @@ public:
     }
 
 protected:
-    /// If is true the about window will show at start up
+    /// If it is true, the about window will show at start up
     bool show_about;
-    /// Last value used as distance from right side of
+    /// Last value used as distance from the right side of
     /// the captured image
     int distance_left_side;
-    /// Last value used as distance from left side of
+    /// Last value used as distance from the left side of
     /// the captured image
     int distance_right_side;
     /// Last value used as height of the captured image
     int height;
-    /// Last value used as line fetching frequence
+    /// Last value used as the frequence of line fetching
     int line_fetching_fr;
     /// Last value used as capture time
     int capture_time;

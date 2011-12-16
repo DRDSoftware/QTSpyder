@@ -9,10 +9,10 @@ Config::Config()
 {
     assert(my==NULL);
     my=this;
-    LoadDefoultValues();
+    LoadDefaultValues();
 }
 
-void Config::LoadDefoultValues()
+void Config::LoadDefaultValues()
 {
     show_about = true;
     distance_left_side = 0;
