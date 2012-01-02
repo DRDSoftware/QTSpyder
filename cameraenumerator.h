@@ -41,9 +41,19 @@ public:
     /// \retval False in case of failure
     bool getCameraID(int index, char id[MAX_CAMERA_ID_LEN]);
 
+    /// Connect to one camera
+    /// \param index Index of the camera to connect
+    /// \return Pointer at the new camera if the connection success, otherwise NULL
+    CSpyder3GigEInterface *getCamera(int index);
+
+    /// Connect to one camera
+    /// \param id Id of the camera to connect
+    /// \return Pointer at the new camera if the connection success, otherwise NULL
+    CSpyder3GigEInterface *getCamera(char id[MAX_CAMERA_ID_LEN]);
+
 signals:
     /// Signal generated when the search of cameras ended
-    void finished();
+    void finished() {}
 
 protected:
     void run();
