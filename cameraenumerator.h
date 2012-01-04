@@ -17,10 +17,10 @@ public:
     virtual ~CameraEnumerator() {}
 
     /// Start the search
-    inline void start();
+    void start();
 
     /// Stop the search
-    inline void stop();
+    void stop();
 
     /// Return True if the search is in progress
     inline bool isSearching()
@@ -43,7 +43,7 @@ public:
 
 signals:
     /// Signal generated when the search of cameras ended
-    void finished();
+    void finished() {}
 
 protected:
     void run();

@@ -15,7 +15,8 @@ SOURCES += main.cpp\
     wizard_1.cpp \
     wizard_2.cpp \
     config.cpp \
-    cameraenumerator.cpp
+    cameraenumerator.cpp \
+    camera.cpp
 
 HEADERS  += \
     mainwindow.h \
@@ -23,7 +24,8 @@ HEADERS  += \
     wizard_1.h \
     wizard_2.h \
     config.h \
-    cameraenumerator.h
+    cameraenumerator.h \
+    camera.h
 
 FORMS    += \
     mainwindow.ui \

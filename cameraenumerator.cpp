@@ -22,28 +22,6 @@ bool CameraEnumerator::getCameraID(int index, char id[MAX_CAMERA_ID_LEN])
     return cam_con.GetCameraID(index, id, MAX_CAMERA_ID_LEN);
 }
 
-CSpyder3GigEInterface *CameraEnumerator::getCamera(int index)
-{
-    char id[MAX_CAMERA_ID_LEN];
-
-    if(getCameraID(index, id)==true)
-    {
-        return getCamera(id);
-    }
-
-    return NULL;
-}
-
-CSpyder3GigEInterface *CameraEnumerator::getCamera(char id[MAX_CAMERA_ID_LEN])
-{
-    if(cam_con.Open(id)==false)
-    {
-        return NULL;
-    }
-
-    return cam_con.GetCamera();
-}
-
 void CameraEnumerator::run()
 {
     num_cameras=cam_con.EnumerateCameras();
