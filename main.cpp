@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     //config.SaveToFile("QTSpyder.cfg");
-    if(gbConfig.LoadFromFile("QTSpyder.cfg")!="")
+    if(gbConfig.LoadFromFile()!="")
     {
         gbConfig.LoadDefoultValues();
     }

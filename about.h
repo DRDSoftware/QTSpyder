@@ -43,6 +43,8 @@ private slots:
 
     void on_aboutOK_clicked();
 
+    void on_aboutShowNextBoot_stateChanged(int arg1);
+
 private:
     Ui::About *ui;
 };

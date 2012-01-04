@@ -18,6 +18,7 @@
 
 #include "about.h"
 #include "ui_about.h"
+#include "config.h"
 
 About::About(QWidget *parent) :
     QDialog(parent),
@@ -45,4 +46,9 @@ void About::on_aboutOK_clicked()
 {
     /// \todo Save the onBoot setting
     UnShow();
+}
+
+void About::on_aboutShowNextBoot_stateChanged(int arg1)
+{
+    Config::getMonoton()->setShowAbout((arg1==Qt::Checked)?true:false);
 }
