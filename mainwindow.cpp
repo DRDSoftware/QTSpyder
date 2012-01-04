@@ -137,6 +137,9 @@ bool MainWindow::SaveAndExit()
         saveAndQuit->setInformativeText(tr("Do you want to save your changes?"));
         saveAndQuit->setStandardButtons(QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel);
         saveAndQuit->setDefaultButton(QMessageBox::Save);
+        saveAndQuit->setButtonText(QMessageBox::Save, tr("Save"));
+        saveAndQuit->setButtonText(QMessageBox::Discard, tr("Discard"));
+        saveAndQuit->setButtonText(QMessageBox::Cancel, tr("Cancel"));
     }
     int ret = saveAndQuit->exec();
     switch(ret)

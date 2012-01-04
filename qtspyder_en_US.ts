@@ -218,14 +218,44 @@ p, li { white-space: pre-wrap; }
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="131"/>
+        <location filename="mainwindow.cpp" line="136"/>
         <source>The configuration has changed.</source>
         <translation>The configuration has changed.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="132"/>
+        <location filename="mainwindow.cpp" line="137"/>
         <source>Do you want to save your changes?</source>
         <translation>Do you want to save your changes?</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="140"/>
+        <source>Save</source>
+        <translation>Save</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="141"/>
+        <source>Discard</source>
+        <translation>Discard</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="142"/>
+        <source>Cancel</source>
+        <translation>Cancel</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="153"/>
+        <source>An error has occurred when saving the configuration.</source>
+        <translation>An error has occurred when saving the configuration.</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="156"/>
+        <source>Don&apos;t save the config</source>
+        <translation>Don&apos;t save the config</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="157"/>
+        <source>Retry</source>
+        <translation>Retry</translation>
     </message>
 </context>
 <context>
@@ -306,6 +336,16 @@ p, li { white-space: pre-wrap; }
         <source>Do you want to quit the Wizard?</source>
         <translation>Do you want to quit the Wizard?</translation>
     </message>
+    <message>
+        <location filename="wizard_1.cpp" line="59"/>
+        <source>Yes</source>
+        <translation>Yes</translation>
+    </message>
+    <message>
+        <location filename="wizard_1.cpp" line="60"/>
+        <source>No</source>
+        <translation>No</translation>
+    </message>
 </context>
 <context>
     <name>Wizard2</name>
@@ -359,22 +399,22 @@ p, li { white-space: pre-wrap; }
         <translation>Find cameras</translation>
     </message>
     <message>
-        <location filename="wizard_2.ui" line="285"/>
+        <location filename="wizard_2.ui" line="288"/>
         <source>Cancel</source>
         <translation>Cancel</translation>
     </message>
     <message>
-        <location filename="wizard_2.ui" line="342"/>
+        <location filename="wizard_2.ui" line="345"/>
         <source>Status:</source>
         <translation>Status:</translation>
     </message>
     <message>
-        <location filename="wizard_2.ui" line="381"/>
+        <location filename="wizard_2.ui" line="387"/>
         <source>Connect</source>
         <translation>Connect</translation>
     </message>
     <message>
-        <location filename="wizard_2.ui" line="388"/>
+        <location filename="wizard_2.ui" line="394"/>
         <source>Exit</source>
         <translation>Exit</translation>
     </message>
@@ -387,6 +427,16 @@ p, li { white-space: pre-wrap; }
         <location filename="wizard_2.cpp" line="56"/>
         <source>Do you want to quit the Wizard?</source>
         <translation>Do you want to quit the Wizard?</translation>
+    </message>
+    <message>
+        <location filename="wizard_2.cpp" line="59"/>
+        <source>Yes</source>
+        <translation>Yes</translation>
+    </message>
+    <message>
+        <location filename="wizard_2.cpp" line="60"/>
+        <source>No</source>
+        <translation>No</translation>
     </message>
 </context>
 </TS>

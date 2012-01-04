@@ -56,11 +56,17 @@ void Wizard2::Exit()
         quit->setInformativeText(tr("Do you want to quit the Wizard?"));
         quit->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
         quit->setDefaultButton(QMessageBox::No);
+        quit->setButtonText(QMessageBox::Yes , tr("Yes"));
+        quit->setButtonText(QMessageBox::No , tr("No"));
     }
     int ret = quit->exec();
     switch(ret)
     {
         case QMessageBox::Yes:
+            if(cam_enum.isSearching())
+            {
+                cam_enum.stop();
+            }
             UnShow();
             this->reject();
             break;
@@ -73,6 +79,7 @@ void Wizard2::Exit()
 void Wizard2::Find()
 {
     /// \todo Find all the cameras connected to the computer
+    cam_enum.start();
 }
 
 void Wizard2::Connect()

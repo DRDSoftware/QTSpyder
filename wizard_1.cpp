@@ -56,6 +56,8 @@ void Wizard1::Exit()
         quit->setInformativeText(tr("Do you want to quit the Wizard?"));
         quit->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
         quit->setDefaultButton(QMessageBox::No);
+        quit->setButtonText(QMessageBox::Yes , tr("Yes"));
+        quit->setButtonText(QMessageBox::No , tr("No"));
     }
     int ret = quit->exec();
     switch(ret)

@@ -23,6 +23,7 @@
 #include <QMessageBox>
 #include <QModelIndex>
 #include <QListWidgetItem>
+#include "cameraenumerator.h"
 
 namespace Ui {
     class Wizard2;
@@ -62,8 +63,8 @@ private slots:
 
 private:
     Ui::Wizard2 *ui;
-
     QMessageBox *quit;
+    CameraEnumerator cam_enum;
 };
 
 #endif // WIZARD_2_H
