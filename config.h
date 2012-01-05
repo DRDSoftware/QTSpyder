@@ -4,6 +4,8 @@
 #include <assert.h>
 #include <QString>
 
+#define CFG_DEFOULT_SAVE_FILE "QTSpyder.cfg"
+
 class Config
 {
 public:
@@ -21,13 +23,13 @@ public:
     /// \param name The configuration will read from this file
     /// \return String with the error message in case of error,
     ///         an empty string in case of success
-    QString LoadFromFile(const QString &name);
+    QString LoadFromFile(const QString &name = QString(CFG_DEFOULT_SAVE_FILE));
 
     /// Save the current configuration of the program into a file
     /// \param name The configuration will write in this file
     /// \return String with the errore message in case of error,
     ///         an empty string in case of success
-    QString SaveToFile(const QString &name);
+    QString SaveToFile(const QString &name = QString(CFG_DEFOULT_SAVE_FILE));
 
     bool getShowAbout()
     {

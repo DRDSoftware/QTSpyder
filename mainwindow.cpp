@@ -18,6 +18,7 @@
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "config.h"
 
 #include "config.h"
 
@@ -40,11 +41,10 @@ MainWindow::MainWindow(QWidget *parent) :
     this->show();
 
     about = NULL;
-    if(Config::getMonoton()->getShowAbout()==true)
+    if(Config::getMonoton()->getShowAbout())
     {
         ShowAbout();
     }
-
     wizard_1 = NULL;
     wizard_2 = NULL;
     quit = NULL;
@@ -136,24 +136,52 @@ void MainWindow::ShowWizard()
 
 bool MainWindow::SaveAndExit()
 {
+    QString err;
+
     if(saveAndQuit==NULL)
     {
         saveAndQuit = new QMessageBox();
+        saveAndQuit->setIcon(QMessageBox::Question);
         saveAndQuit->setText(tr("The configuration has changed."));
         saveAndQuit->setInformativeText(tr("Do you want to save your changes?"));
         saveAndQuit->setStandardButtons(QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel);
         saveAndQuit->setDefaultButton(QMessageBox::Save);
+        saveAndQuit->setButtonText(QMessageBox::Save, tr("Save"));
+        saveAndQuit->setButtonText(QMessageBox::Discard, tr("Discard"));
+        saveAndQuit->setButtonText(QMessageBox::Cancel, tr("Cancel"));
     }
     int ret = saveAndQuit->exec();
     switch(ret)
     {
         case QMessageBox::Save:
-            Config::getMonoton()->SaveToFile("QTSpyder.cfg");
+            err=Config::getMonoton()->SaveToFile();
+            if(err!="")
+            {
+                QMessageBox *msg = new QMessageBox();
+                msg->setIcon(QMessageBox::Critical);
+                msg->setText(tr("An error has occurred when saving the configuration."));
+                msg->setInformativeText(err);
+                msg->setStandardButtons(QMessageBox::Ok | QMessageBox::Retry);
+                msg->setButtonText(QMessageBox::Ok, tr("Don't save the config"));
+                msg->setButtonText(QMessageBox::Retry, tr("Retry"));
+
+                while(msg->exec()==QMessageBox::Retry)
+                {
+                    err=Config::getMonoton()->SaveToFile();
+                    if(err=="")
+                    {
+                        break;
+                    }
+                    msg->setInformativeText(err);
+                }
+
+                delete msg;
+            }
             return true;
-            break;
+
         case QMessageBox::Discard:
             return true;
-            break;
+
         case QMessageBox::Cancel:
         default:
             break;
@@ -181,4 +209,9 @@ void MainWindow::on_actionAbout_triggered()
 void MainWindow::on_actionConnect_triggered()
 {
     ShowWizard();
+}
+
+void MainWindow::on_actionRestoreDefaultConfig_triggered()
+{
+    Config::getMonoton()->LoadDefoultValues();
 }

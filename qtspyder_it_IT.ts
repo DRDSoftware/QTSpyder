@@ -218,14 +218,44 @@ p, li { white-space: pre-wrap; }
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="131"/>
+        <location filename="mainwindow.cpp" line="136"/>
         <source>The configuration has changed.</source>
         <translation>La configurazione è stata cambiata.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="132"/>
+        <location filename="mainwindow.cpp" line="137"/>
         <source>Do you want to save your changes?</source>
         <translation>Vuoi salvare le tue modifiche?</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="140"/>
+        <source>Save</source>
+        <translation>Salva</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="141"/>
+        <source>Discard</source>
+        <translation>Abbandona</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="142"/>
+        <source>Cancel</source>
+        <translation>Annulla</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="153"/>
+        <source>An error has occurred when saving the configuration.</source>
+        <translation>Si è verificato un errore mentre si salvava la configurazione.</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="156"/>
+        <source>Don&apos;t save the config</source>
+        <translation>Non salvare la configurazione</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="157"/>
+        <source>Retry</source>
+        <translation>Riprova</translation>
     </message>
 </context>
 <context>
@@ -306,6 +336,16 @@ p, li { white-space: pre-wrap; }
         <source>Do you want to quit the Wizard?</source>
         <translation>Vuoi chiudere la procedura guidata?</translation>
     </message>
+    <message>
+        <location filename="wizard_1.cpp" line="59"/>
+        <source>Yes</source>
+        <translation>Si</translation>
+    </message>
+    <message>
+        <location filename="wizard_1.cpp" line="60"/>
+        <source>No</source>
+        <translation>No</translation>
+    </message>
 </context>
 <context>
     <name>Wizard2</name>
@@ -359,22 +399,22 @@ p, li { white-space: pre-wrap; }
         <translation>Trova Telecamere</translation>
     </message>
     <message>
-        <location filename="wizard_2.ui" line="285"/>
+        <location filename="wizard_2.ui" line="288"/>
         <source>Cancel</source>
         <translation>Interrompi</translation>
     </message>
     <message>
-        <location filename="wizard_2.ui" line="342"/>
+        <location filename="wizard_2.ui" line="345"/>
         <source>Status:</source>
         <translation>Stato:</translation>
     </message>
     <message>
-        <location filename="wizard_2.ui" line="381"/>
+        <location filename="wizard_2.ui" line="387"/>
         <source>Connect</source>
         <translation>Connetti</translation>
     </message>
     <message>
-        <location filename="wizard_2.ui" line="388"/>
+        <location filename="wizard_2.ui" line="394"/>
         <source>Exit</source>
         <translation>Esci</translation>
     </message>
@@ -387,6 +427,16 @@ p, li { white-space: pre-wrap; }
         <location filename="wizard_2.cpp" line="56"/>
         <source>Do you want to quit the Wizard?</source>
         <translation>Vuoi chiudere la procedura guidata?</translation>
+    </message>
+    <message>
+        <location filename="wizard_2.cpp" line="59"/>
+        <source>Yes</source>
+        <translation>Si</translation>
+    </message>
+    <message>
+        <location filename="wizard_2.cpp" line="60"/>
+        <source>No</source>
+        <translation>No</translation>
     </message>
 </context>
 </TS>
