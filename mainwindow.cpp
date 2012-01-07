@@ -213,5 +213,5 @@ void MainWindow::on_actionConnect_triggered()
 
 void MainWindow::on_actionRestoreDefaultConfig_triggered()
 {
-    Config::getMonoton()->LoadDefoultValues();
+    Config::getMonoton()->LoadDefaultValues();
 }

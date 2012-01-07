@@ -25,6 +25,8 @@ Wizard2::Wizard2(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    QObject::connect(&cam_enum, SIGNAL(finished()), this, SLOT(on_Find_finished()));
+
     quit = NULL;
 }
 
@@ -108,7 +110,37 @@ void Wizard2::on_wizard2Find_clicked()
     ui->wizard2Cancel->setEnabled(false);
 }
 
+void Wizard2::on_wizard2Cancel_clicked()
+{
+    cam_enum.stop();
+}
+
 void Wizard2::on_wizard2List_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous)
 {
+    current;
+    previous;
     ui->wizard2Connect->setEnabled(true);
+}
+
+void Wizard2::on_Find_finished()
+{
+    char **results;
+    // Get the number of cameras connected
+    int count=cam_enum.getNumCameras();
+    // Initialize the results vector
+    results = new char*[count];
+    // Get the IDs of all the camera connected
+    for(int i=0; i<count; i++)
+    {
+        results[i] = new char[65];
+        cam_enum.getCameraID(i, results[i]);
+        QString temp = results[i];
+        ui->wizard2List->addItem(new QListWidgetItem(temp));
+    }
+    // Delete the IDs from memory
+    for(int i=0; i<count; i++)
+    {
+        delete results[i];
+    }
+    delete results;
 }

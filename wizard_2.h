@@ -59,7 +59,11 @@ private slots:
 
     void on_wizard2Find_clicked();
 
+    void on_wizard2Cancel_clicked();
+
     void on_wizard2List_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
+
+    void on_Find_finished();
 
 private:
     Ui::Wizard2 *ui;

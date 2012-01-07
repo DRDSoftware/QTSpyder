@@ -11,7 +11,7 @@
 /// Provide the support for search and identify the cameras
 /// correctly connected to the pc, the search is executed in
 /// asyncronous mode
-class CameraEnumerator: protected QThread
+class CameraEnumerator: public QThread
 {
 public:
     virtual ~CameraEnumerator() {}
