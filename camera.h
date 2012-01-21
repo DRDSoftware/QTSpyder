@@ -2,6 +2,7 @@
 #define CAMERA_H
 
 #include "cameraenumerator.h"
+#include <QDebug>
 
 class Camera
 {
@@ -22,9 +23,17 @@ public:
         return (cam!=NULL)?true:false;
     }
 
+    unsigned long getSizeWidth();
+
+    unsigned long getSizeHeight();
+
+    unsigned long getPixelByteSize();
+
 protected:
     CCameraConnection conn;
     CSpyder3GigEInterface *cam;
+
+    void printError();
 };
 
 #endif // CAMERA_H
