@@ -97,6 +97,7 @@ void Wizard2::Connect()
         msg.setText(tr("An error has occurred when connecting to the camera ")+cam_id);
         msg.setStandardButtons(QMessageBox::Ok);
         msg.exec();
+        ui->wizard2StatusMessage->setText(tr("Connection error"));
     }
     else
     {
