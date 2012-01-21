@@ -20,8 +20,6 @@
 #include "ui_mainwindow.h"
 #include "config.h"
 
-#include "config.h"
-
 #include <QStyle>
 #include <QDesktopWidget>
 

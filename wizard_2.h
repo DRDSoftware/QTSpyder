@@ -25,6 +25,8 @@
 #include <QListWidgetItem>
 #include "cameraenumerator.h"
 
+class MainWindow;
+
 namespace Ui {
     class Wizard2;
 }
@@ -69,6 +71,7 @@ private:
     Ui::Wizard2 *ui;
     QMessageBox *quit;
     CameraEnumerator cam_enum;
+    MainWindow *parentWindow;
 };
 
 #endif // WIZARD_2_H

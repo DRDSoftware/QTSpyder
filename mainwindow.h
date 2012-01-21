@@ -25,6 +25,7 @@
 #include <about.h>
 #include <wizard_1.h>
 #include <wizard_2.h>
+#include <camera.h>
 
 namespace Ui {
     class MainWindow;
@@ -37,6 +38,8 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+
+    Camera camera;
 
 private slots:
     /// Action to be executed when the

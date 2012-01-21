@@ -18,6 +18,7 @@
 
 #include "wizard_2.h"
 #include "ui_wizard_2.h"
+#include "mainwindow.h"
 
 Wizard2::Wizard2(QWidget *parent) :
     QDialog(parent),
@@ -26,6 +27,8 @@ Wizard2::Wizard2(QWidget *parent) :
     ui->setupUi(this);
 
     QObject::connect(&cam_enum, SIGNAL(finished()), this, SLOT(on_Find_finished()));
+
+    parentWindow = static_cast<MainWindow*>(parent);
 
     quit = NULL;
 }
@@ -87,7 +90,20 @@ void Wizard2::Find()
 void Wizard2::Connect()
 {
     /// \todo Connection to the camera
-    this->accept();
+
+    if(parentWindow->camera.Connect(&(ui->wizard2List->currentItem()->text()))==true)
+    {
+        QMessageBox *msg = new QMessageBox();
+        msg->setIcon(QMessageBox::Critical);
+        msg->setText(tr("An error has occurred when connecting to the camera ")+ui->wizard2List->currentItem()->text());
+        msg->setStandardButtons(QMessageBox::Ok);
+
+        this->accept();
+    }
+    else
+    {
+
+    }
 }
 
 void Wizard2::on_wizard2Exit_clicked()

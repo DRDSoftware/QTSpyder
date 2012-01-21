@@ -10,7 +10,7 @@ Camera::~Camera()
     Disconnect();
 }
 
-bool Camera::Connect(char id[MAX_CAMERA_ID_LEN])
+bool Camera::Connect(const char id[MAX_CAMERA_ID_LEN])
 {
     if(conn.Open(id)==true)
     {

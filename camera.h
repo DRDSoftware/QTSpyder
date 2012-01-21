@@ -9,7 +9,12 @@ public:
     Camera();
     virtual ~Camera();
 
-    bool Connect(char id[MAX_CAMERA_ID_LEN]);
+    bool Connect(const char id[]);
+    bool Connect(const QString *string)
+    {
+        return Connect(string->toStdString().data());
+    }
+
     void Disconnect();
 
     inline bool isConnected()
