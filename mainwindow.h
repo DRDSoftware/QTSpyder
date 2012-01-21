@@ -49,6 +49,8 @@ private slots:
 
     void on_actionConnect_triggered();
 
+    void on_actionDisconnect_triggered();
+
     void on_actionRestoreDefaultConfig_triggered();
 
     void on_Timer_Refreshed();
@@ -66,6 +68,8 @@ protected:
     void ShowAbout();
     /// Show and handle the Wizard
     void ShowWizard();
+    /// Disconnect the camera
+    void Disconnect();
 
     /// Override the default Close event
     void closeEvent(QCloseEvent *event);

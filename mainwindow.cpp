@@ -49,7 +49,7 @@ MainWindow::MainWindow(QWidget *parent) :
     saveAndQuit = NULL;
 
     timer = new QTimer();
-    connect(timer, SIGNAL(timeout()), this, SLOT(update()));
+    connect(timer, SIGNAL(timeout()), this, SLOT(on_Timer_Refreshed()));
     timer->start(30000);
 }
 
@@ -140,6 +140,29 @@ void MainWindow::ShowWizard()
         return;
     }
 
+    ui->actionConnect->setEnabled(false);
+    ui->actionDisconnect->setEnabled(true);
+    ui->actionAcquireImage->setEnabled(true);
+    ui->actionContinuous_Capture->setEnabled(true);
+}
+
+void MainWindow::Disconnect()
+{
+    camera.Disconnect();
+
+    ui->actionConnect->setEnabled(true);
+    ui->actionDisconnect->setEnabled(false);
+    ui->actionAcquireImage->setEnabled(false);
+    ui->actionContinuous_Capture->setEnabled(false);
+
+    QMessageBox *msg = new QMessageBox();
+    msg->setIcon(QMessageBox::Information);
+    msg->setText(tr("Disconnected from the camera"));
+    msg->setStandardButtons(QMessageBox::Ok);
+
+    msg->exec();
+
+    delete msg;
 }
 
 bool MainWindow::SaveAndExit()
@@ -217,6 +240,11 @@ void MainWindow::on_actionAbout_triggered()
 void MainWindow::on_actionConnect_triggered()
 {
     ShowWizard();
+}
+
+void MainWindow::on_actionDisconnect_triggered()
+{
+    Disconnect();
 }
 
 void MainWindow::on_actionRestoreDefaultConfig_triggered()
