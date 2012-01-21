@@ -104,10 +104,9 @@ void Wizard2::on_wizard2Find_clicked()
 {
     // Enable the user to stop the Find operation
     ui->wizard2Cancel->setEnabled(true);
+    ui->wizard2Find->setEnabled(false);
 
     Find();
-
-    ui->wizard2Cancel->setEnabled(false);
 }
 
 void Wizard2::on_wizard2Cancel_clicked()
@@ -124,6 +123,9 @@ void Wizard2::on_wizard2List_currentItemChanged(QListWidgetItem *current, QListW
 
 void Wizard2::on_Find_finished()
 {
+    ui->wizard2Cancel->setEnabled(false);
+    ui->wizard2Find->setEnabled(true);
+
     char **results;
     // Get the number of cameras connected
     int count=cam_enum.getNumCameras();
