@@ -29,3 +29,17 @@ void Camera::Disconnect()
         cam=NULL;
     }
 }
+
+float Camera::getTemperature()
+{
+    float retval;
+    cam->GetCameraTemperature(retval);
+    return retval;
+}
+
+float Camera::getVoltage()
+{
+    float retval;
+    cam->GetCameraVoltage(retval);
+    return retval;
+}

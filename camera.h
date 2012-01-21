@@ -22,6 +22,10 @@ public:
         return (cam!=NULL)?true:false;
     }
 
+    float getTemperature();
+
+    float getVoltage();
+
 protected:
     CCameraConnection conn;
     CSpyder3GigEInterface *cam;
