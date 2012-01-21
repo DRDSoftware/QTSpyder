@@ -81,28 +81,30 @@ void Wizard2::Exit()
     }
 }
 
-void Wizard2::Find()
-{
-    /// \todo Find all the cameras connected to the computer
-    cam_enum.start();
-}
-
 void Wizard2::Connect()
 {
     /// \todo Connection to the camera
+    QMessageBox msg;
+    QString cam_id = ui->wizard2List->currentItem()->text();
 
-    if(parentWindow->camera.Connect(&(ui->wizard2List->currentItem()->text()))==true)
+    ui->wizard2StatusMessage->setText(tr("Connecting to the selected camera..."));
+    ui->wizard2StatusMessage->update();
+    ui->wizard2StatusMessage->repaint();
+
+    if(parentWindow->camera.Connect(&cam_id)==false)
     {
-        QMessageBox *msg = new QMessageBox();
-        msg->setIcon(QMessageBox::Critical);
-        msg->setText(tr("An error has occurred when connecting to the camera ")+ui->wizard2List->currentItem()->text());
-        msg->setStandardButtons(QMessageBox::Ok);
-
-        this->accept();
+        msg.setIcon(QMessageBox::Critical);
+        msg.setText(tr("An error has occurred when connecting to the camera ")+cam_id);
+        msg.setStandardButtons(QMessageBox::Ok);
+        msg.exec();
     }
     else
     {
-
+        msg.setIcon(QMessageBox::Information);
+        msg.setText(tr("Successful connected to the camera ")+cam_id);
+        msg.setStandardButtons(QMessageBox::Ok);
+        msg.exec();
+        this->accept();
     }
 }
 
@@ -122,7 +124,10 @@ void Wizard2::on_wizard2Find_clicked()
     ui->wizard2Cancel->setEnabled(true);
     ui->wizard2Find->setEnabled(false);
 
-    Find();
+    /// \todo Find all the cameras connected to the computer
+    ui->wizard2StatusMessage->setText(tr("Searching for cameras..."));
+
+    cam_enum.start();
 }
 
 void Wizard2::on_wizard2Cancel_clicked()
@@ -141,6 +146,8 @@ void Wizard2::on_Find_finished()
 {
     ui->wizard2Cancel->setEnabled(false);
     ui->wizard2Find->setEnabled(true);
+
+    ui->wizard2StatusMessage->setText(tr("Search terminated."));
 
     char **results;
     // Get the number of cameras connected

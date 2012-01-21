@@ -48,9 +48,6 @@ public:
     // Exit the Wizard
     void Exit();
 
-    // Find all the cameras connected
-    void Find();
-
     // Connect to the selected camera
     void Connect();
 
@@ -59,6 +56,7 @@ private slots:
 
     void on_wizard2Connect_clicked();
 
+    // Find all the cameras connected
     void on_wizard2Find_clicked();
 
     void on_wizard2Cancel_clicked();
