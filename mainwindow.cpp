@@ -47,10 +47,22 @@ MainWindow::MainWindow(QWidget *parent) :
     wizard_2 = NULL;
     quit = NULL;
     saveAndQuit = NULL;
+
+    timer = new QTimer();
+    connect(timer, SIGNAL(timeout()), this, SLOT(update()));
+    timer->start(30000);
 }
 
 MainWindow::~MainWindow()
 {
+    if(timer!=NULL)
+    {
+        if(timer->isActive())
+        {
+            timer->stop();
+        }
+        delete timer;
+    }
     if(about!=NULL)
     {
         delete about;
@@ -128,8 +140,6 @@ void MainWindow::ShowWizard()
         return;
     }
 
-    /// \todo Connection with the camera selected (how to receive which one was chosen?)
-    ///       Solution (?): make the connection in the Wizard and receive only the status here
 }
 
 bool MainWindow::SaveAndExit()
@@ -212,4 +222,18 @@ void MainWindow::on_actionConnect_triggered()
 void MainWindow::on_actionRestoreDefaultConfig_triggered()
 {
     Config::getMonoton()->LoadDefaultValues();
+}
+
+void MainWindow::on_Timer_Refreshed()
+{
+    if(camera.isConnected())
+    {
+        ui->temperature->setText(QString::number(camera.getTemperature()));
+        ui->voltage->setText(QString::number(camera.getVoltage()));
+    }
+    else
+    {
+        ui->temperature->setText("");
+        ui->voltage->setText("");
+    }
 }

@@ -22,6 +22,7 @@
 #include <QMainWindow>
 #include <QMessageBox>
 #include <QtGui/QCloseEvent>
+#include <QTimer>
 #include <about.h>
 #include <wizard_1.h>
 #include <wizard_2.h>
@@ -49,6 +50,8 @@ private slots:
     void on_actionConnect_triggered();
 
     void on_actionRestoreDefaultConfig_triggered();
+
+    void on_Timer_Refreshed();
 
 protected:
     /// Lock the UI of the window
@@ -85,6 +88,9 @@ private:
     /// user want to exit the application
     /// or if he want to save before
     QMessageBox *saveAndQuit;
+
+    /// Timer to check various datas
+    QTimer *timer;
 };
 
 #endif // MAINWINDOW_H
