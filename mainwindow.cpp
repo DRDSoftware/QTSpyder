@@ -47,10 +47,22 @@ MainWindow::MainWindow(QWidget *parent) :
     wizard_2 = NULL;
     quit = NULL;
     saveAndQuit = NULL;
+
+    timer = new QTimer();
+    connect(timer, SIGNAL(timeout()), this, SLOT(on_Timer_Refreshed()));
+    timer->start(30000);
 }
 
 MainWindow::~MainWindow()
 {
+    if(timer!=NULL)
+    {
+        if(timer->isActive())
+        {
+            timer->stop();
+        }
+        delete timer;
+    }
     if(about!=NULL)
     {
         delete about;
@@ -130,10 +142,10 @@ void MainWindow::ShowWizard()
 
     // Successful connected at the camera
 
-    this->ui->actionConnect->setEnabled(false);
-    this->ui->actionDisconnect->setEnabled(true);
-    this->ui->actionAcquireImage->setEnabled(true);
-    this->ui->actionContinuous_Capture->setEnabled(true);
+    ui->actionConnect->setEnabled(false);
+    ui->actionDisconnect->setEnabled(true);
+    ui->actionAcquireImage->setEnabled(true);
+    ui->actionContinuous_Capture->setEnabled(true);
 }
 
 bool MainWindow::SaveAndExit()
@@ -218,14 +230,28 @@ void MainWindow::on_actionRestoreDefaultConfig_triggered()
     Config::getMonoton()->LoadDefaultValues();
 }
 
+void MainWindow::on_Timer_Refreshed()
+{
+    if(camera.isConnected())
+    {
+        ui->temperature->setText(QString::number(camera.getTemperature()));
+        ui->voltage->setText(QString::number(camera.getVoltage()));
+    }
+    else
+    {
+        ui->temperature->setText("");
+        ui->voltage->setText("");
+    }
+}
+
 void MainWindow::on_actionDisconnect_triggered()
 {
     camera.Disconnect();
 
-    this->ui->actionConnect->setEnabled(true);
-    this->ui->actionDisconnect->setEnabled(false);
-    this->ui->actionAcquireImage->setEnabled(false);
-    this->ui->actionContinuous_Capture->setEnabled(false);
+    ui->actionConnect->setEnabled(true);
+    ui->actionDisconnect->setEnabled(false);
+    ui->actionAcquireImage->setEnabled(false);
+    ui->actionContinuous_Capture->setEnabled(false);
 
     QMessageBox msg;
     msg.setIcon(QMessageBox::Information);

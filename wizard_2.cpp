@@ -102,7 +102,7 @@ void Wizard2::Connect()
     else
     {
         msg.setIcon(QMessageBox::Information);
-        msg.setText(tr("Successful connected to the camera ")+cam_id);
+        msg.setText(tr("Successfully connected to the camera ")+cam_id);
         msg.setStandardButtons(QMessageBox::Ok);
         msg.exec();
         this->accept();
@@ -127,6 +127,8 @@ void Wizard2::on_wizard2Find_clicked()
 
     /// \todo Find all the cameras connected to the computer
     ui->wizard2StatusMessage->setText(tr("Searching for cameras..."));
+
+    ui->wizard2List->clear();
 
     cam_enum.start();
 }

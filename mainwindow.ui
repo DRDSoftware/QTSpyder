@@ -1186,8 +1186,4 @@ p, li { white-space: pre-wrap; }
    </hints>
   </connection>
  </connections>
- <slots>
-  <slot>ShowAbout()</slot>
-  <slot>ShowWizard()</slot>
- </slots>
 </ui>

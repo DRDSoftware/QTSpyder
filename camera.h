@@ -23,6 +23,9 @@ public:
         return (cam!=NULL)?true:false;
     }
 
+    float getTemperature();
+
+    float getVoltage();
     unsigned long getSizeWidth();
 
     unsigned long getSizeHeight();

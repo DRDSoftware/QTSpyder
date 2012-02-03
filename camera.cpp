@@ -30,6 +30,20 @@ void Camera::Disconnect()
     }
 }
 
+float Camera::getTemperature()
+{
+    float retval;
+    cam->GetCameraTemperature(retval);
+    return retval;
+}
+
+float Camera::getVoltage()
+{
+    float retval;
+    cam->GetCameraVoltage(retval);
+    return retval;
+}
+
 unsigned long Camera::getSizeWidth()
 {
     unsigned long v;
