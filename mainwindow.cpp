@@ -128,8 +128,12 @@ void MainWindow::ShowWizard()
         return;
     }
 
-    /// \todo Connection with the camera selected (how to receive which one was chosen?)
-    ///       Solution (?): make the connection in the Wizard and receive only the status here
+    // Successful connected at the camera
+
+    this->ui->actionConnect->setEnabled(false);
+    this->ui->actionDisconnect->setEnabled(true);
+    this->ui->actionAcquireImage->setEnabled(true);
+    this->ui->actionContinuous_Capture->setEnabled(true);
 }
 
 bool MainWindow::SaveAndExit()
@@ -212,4 +216,20 @@ void MainWindow::on_actionConnect_triggered()
 void MainWindow::on_actionRestoreDefaultConfig_triggered()
 {
     Config::getMonoton()->LoadDefaultValues();
+}
+
+void MainWindow::on_actionDisconnect_triggered()
+{
+    camera.Disconnect();
+
+    this->ui->actionConnect->setEnabled(true);
+    this->ui->actionDisconnect->setEnabled(false);
+    this->ui->actionAcquireImage->setEnabled(false);
+    this->ui->actionContinuous_Capture->setEnabled(false);
+
+    QMessageBox msg;
+    msg.setIcon(QMessageBox::Information);
+    msg.setText(tr("Disconnected from the camera"));
+    msg.setStandardButtons(QMessageBox::Ok);
+    msg.exec();
 }

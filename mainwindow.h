@@ -50,6 +50,8 @@ private slots:
 
     void on_actionRestoreDefaultConfig_triggered();
 
+    void on_actionDisconnect_triggered();
+
 protected:
     /// Lock the UI of the window
     void LockMe();

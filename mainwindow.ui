@@ -911,11 +911,17 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionDisconnect">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Disconnect</string>
    </property>
   </action>
   <action name="actionAcquireImage">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Single Capture</string>
    </property>
@@ -926,6 +932,9 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionContinuous_Capture">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Continuous Capture</string>
    </property>
