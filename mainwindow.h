@@ -83,14 +83,6 @@ private:
     /// Second pass of the Wizard
     Wizard2 *wizard_2;
 
-    /// A small MessageBox asking if the
-    /// user want to exit the application
-    QMessageBox *quit;
-    /// A small MessageBox asking if the
-    /// user want to exit the application
-    /// or if he want to save before
-    QMessageBox *saveAndQuit;
-
     /// Timer to check various datas
     QTimer *timer;
 };

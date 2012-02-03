@@ -29,16 +29,10 @@ Wizard2::Wizard2(QWidget *parent) :
     QObject::connect(&cam_enum, SIGNAL(finished()), this, SLOT(on_Find_finished()));
 
     parentWindow = static_cast<MainWindow*>(parent);
-
-    quit = NULL;
 }
 
 Wizard2::~Wizard2()
 {
-    if(quit!=NULL)
-    {
-        delete quit;
-    }
     delete ui;
 }
 
@@ -54,18 +48,15 @@ void Wizard2::UnShow()
 
 void Wizard2::Exit()
 {
-    if(quit==NULL)
-    {
-        quit = new QMessageBox();
-        quit->setText(tr("The Wizard didn't finish yet."));
-        quit->setInformativeText(tr("Do you want to quit the Wizard?"));
-        quit->setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-        quit->setDefaultButton(QMessageBox::No);
-        quit->setButtonText(QMessageBox::Yes , tr("Yes"));
-        quit->setButtonText(QMessageBox::No , tr("No"));
-    }
-    int ret = quit->exec();
-    switch(ret)
+    QMessageBox quit;
+    quit.setText(tr("The Wizard didn't finish yet."));
+    quit.setInformativeText(tr("Do you want to quit the Wizard?"));
+    quit.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+    quit.setDefaultButton(QMessageBox::No);
+    quit.setButtonText(QMessageBox::Yes , tr("Yes"));
+    quit.setButtonText(QMessageBox::No , tr("No"));
+
+    switch(quit.exec())
     {
         case QMessageBox::Yes:
             if(cam_enum.isSearching())
@@ -75,6 +66,7 @@ void Wizard2::Exit()
             UnShow();
             this->reject();
             break;
+
         case QMessageBox::No:
         default:
             break;
@@ -125,7 +117,6 @@ void Wizard2::on_wizard2Find_clicked()
     ui->wizard2Cancel->setEnabled(true);
     ui->wizard2Find->setEnabled(false);
 
-    /// \todo Find all the cameras connected to the computer
     ui->wizard2StatusMessage->setText(tr("Searching for cameras..."));
 
     ui->wizard2List->clear();

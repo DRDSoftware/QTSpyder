@@ -45,8 +45,6 @@ MainWindow::MainWindow(QWidget *parent) :
     }
     wizard_1 = NULL;
     wizard_2 = NULL;
-    quit = NULL;
-    saveAndQuit = NULL;
 
     timer = new QTimer();
     connect(timer, SIGNAL(timeout()), this, SLOT(on_Timer_Refreshed()));
@@ -74,14 +72,6 @@ MainWindow::~MainWindow()
     if(wizard_2!=NULL)
     {
         delete wizard_2;
-    }
-    if(quit!=NULL)
-    {
-        delete quit;
-    }
-    if(saveAndQuit!=NULL)
-    {
-        delete saveAndQuit;
     }
     delete ui;
 }
@@ -152,44 +142,40 @@ bool MainWindow::SaveAndExit()
 {
     QString err;
 
-    if(saveAndQuit==NULL)
-    {
-        saveAndQuit = new QMessageBox();
-        saveAndQuit->setIcon(QMessageBox::Question);
-        saveAndQuit->setText(tr("The configuration has changed."));
-        saveAndQuit->setInformativeText(tr("Do you want to save your changes?"));
-        saveAndQuit->setStandardButtons(QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel);
-        saveAndQuit->setDefaultButton(QMessageBox::Save);
-        saveAndQuit->setButtonText(QMessageBox::Save, tr("Save"));
-        saveAndQuit->setButtonText(QMessageBox::Discard, tr("Discard"));
-        saveAndQuit->setButtonText(QMessageBox::Cancel, tr("Cancel"));
-    }
-    int ret = saveAndQuit->exec();
+    QMessageBox saveAndQuit;
+    saveAndQuit.setIcon(QMessageBox::Question);
+    saveAndQuit.setText(tr("The configuration has changed."));
+    saveAndQuit.setInformativeText(tr("Do you want to save your changes?"));
+    saveAndQuit.setStandardButtons(QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel);
+    saveAndQuit.setDefaultButton(QMessageBox::Save);
+    saveAndQuit.setButtonText(QMessageBox::Save, tr("Save"));
+    saveAndQuit.setButtonText(QMessageBox::Discard, tr("Discard"));
+    saveAndQuit.setButtonText(QMessageBox::Cancel, tr("Cancel"));
+
+    int ret = saveAndQuit.exec();
     switch(ret)
     {
         case QMessageBox::Save:
             err=Config::getMonoton()->SaveToFile();
             if(err!="")
             {
-                QMessageBox *msg = new QMessageBox();
-                msg->setIcon(QMessageBox::Critical);
-                msg->setText(tr("An error has occurred when saving the configuration."));
-                msg->setInformativeText(err);
-                msg->setStandardButtons(QMessageBox::Ok | QMessageBox::Retry);
-                msg->setButtonText(QMessageBox::Ok, tr("Don't save the config"));
-                msg->setButtonText(QMessageBox::Retry, tr("Retry"));
+                QMessageBox msg;
+                msg.setIcon(QMessageBox::Critical);
+                msg.setText(tr("An error has occurred when saving the configuration."));
+                msg.setInformativeText(err);
+                msg.setStandardButtons(QMessageBox::Ok | QMessageBox::Retry);
+                msg.setButtonText(QMessageBox::Ok, tr("Don't save the config"));
+                msg.setButtonText(QMessageBox::Retry, tr("Retry"));
 
-                while(msg->exec()==QMessageBox::Retry)
+                while(msg.exec()==QMessageBox::Retry)
                 {
                     err=Config::getMonoton()->SaveToFile();
                     if(err=="")
                     {
                         break;
                     }
-                    msg->setInformativeText(err);
+                    msg.setInformativeText(err);
                 }
-
-                delete msg;
             }
             return true;
 
@@ -200,6 +186,7 @@ bool MainWindow::SaveAndExit()
         default:
             break;
     }
+
     return false;
 }
 

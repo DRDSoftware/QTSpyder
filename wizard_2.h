@@ -67,7 +67,6 @@ private slots:
 
 private:
     Ui::Wizard2 *ui;
-    QMessageBox *quit;
     CameraEnumerator cam_enum;
     MainWindow *parentWindow;
 };
