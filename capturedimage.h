@@ -24,6 +24,11 @@ public:
         return qimage;
     }
 
+    inline CyUserBuffer &getCyBuffer() const
+    {
+        return const_cast<CyUserBuffer &>(buffer);
+    }
+
     /// Return the width of the image captured
     inline const unsigned long getWidth() const
     {
