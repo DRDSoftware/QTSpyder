@@ -3,6 +3,7 @@
 
 #include "CyUserBuffer.h"
 #include "camera.h"
+#include <QImage>
 
 class CapturedImage
 {
@@ -17,10 +18,10 @@ public:
 
     void destroy();
 
-    /// Return the pointer to first pixel in the image
-    inline const unsigned char *getRowData() const
+    /// Return the the QImage object containing the image
+    inline const QImage *getImage() const
     {
-        return buffer.GetBuffer();
+        return qimage;
     }
 
     /// Return the width of the image captured
@@ -43,6 +44,7 @@ public:
 
 protected:
     CyUserBuffer buffer;
+    QImage *qimage;
     bool created;
 
     /// Width of the image captured
