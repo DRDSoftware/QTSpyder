@@ -13,6 +13,9 @@
 /// asyncronous mode
 class CameraEnumerator: public QThread
 {
+private:
+    Q_OBJECT
+
 public:
     virtual ~CameraEnumerator() {}
 
@@ -43,7 +46,7 @@ public:
 
 signals:
     /// Signal generated when the search of cameras ended
-    void finished() {}
+    void finished();
 
 protected:
     void run();
