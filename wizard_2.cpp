@@ -26,7 +26,7 @@ Wizard2::Wizard2(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QObject::connect(&cam_enum, SIGNAL(finished()), this, SLOT(on_Find_finished()));
+    QObject::connect(&cam_enum, SIGNAL(finished()), this, SLOT(onFindFinished()));
 
     parentWindow = static_cast<MainWindow*>(parent);
 }
@@ -136,7 +136,7 @@ void Wizard2::on_wizard2List_currentItemChanged(QListWidgetItem *current, QListW
     ui->wizard2Connect->setEnabled(true);
 }
 
-void Wizard2::on_Find_finished()
+void Wizard2::onFindFinished()
 {
     ui->wizard2Cancel->setEnabled(false);
     ui->wizard2Find->setEnabled(true);

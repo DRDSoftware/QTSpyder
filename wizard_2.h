@@ -63,7 +63,7 @@ private slots:
 
     void on_wizard2List_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
 
-    void on_Find_finished();
+    void onFindFinished();
 
 private:
     Ui::Wizard2 *ui;

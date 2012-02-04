@@ -47,8 +47,10 @@ MainWindow::MainWindow(QWidget *parent) :
     wizard_2 = NULL;
 
     timer = new QTimer();
-    connect(timer, SIGNAL(timeout()), this, SLOT(on_Timer_Refreshed()));
+    connect(timer, SIGNAL(timeout()), this, SLOT(onTimerRefreshed()));
     timer->start(30000);
+
+    connect(&camera, SIGNAL(finishedAcquiring(bool)), this, SLOT(onFinishedAcquiring(bool)));
 }
 
 MainWindow::~MainWindow()
@@ -136,6 +138,8 @@ void MainWindow::ShowWizard()
     ui->actionDisconnect->setEnabled(true);
     ui->actionAcquireImage->setEnabled(true);
     ui->actionContinuous_Capture->setEnabled(true);
+    ui->singleCapture->setEnabled(true);
+    ui->continuousCapture->setEnabled(true);
 }
 
 bool MainWindow::SaveAndExit()
@@ -194,6 +198,7 @@ void MainWindow::closeEvent(QCloseEvent *event)
 {
     if(SaveAndExit()==true)
     {
+        camera.Disconnect();
         event->accept();
     }
     else
@@ -217,7 +222,7 @@ void MainWindow::on_actionRestoreDefaultConfig_triggered()
     Config::getMonoton()->LoadDefaultValues();
 }
 
-void MainWindow::on_Timer_Refreshed()
+void MainWindow::onTimerRefreshed()
 {
     if(camera.isConnected())
     {
@@ -239,10 +244,34 @@ void MainWindow::on_actionDisconnect_triggered()
     ui->actionDisconnect->setEnabled(false);
     ui->actionAcquireImage->setEnabled(false);
     ui->actionContinuous_Capture->setEnabled(false);
+    ui->singleCapture->setEnabled(false);
+    ui->continuousCapture->setEnabled(false);
 
     QMessageBox msg;
     msg.setIcon(QMessageBox::Information);
     msg.setText(tr("Disconnected from the camera"));
     msg.setStandardButtons(QMessageBox::Ok);
     msg.exec();
+}
+
+void MainWindow::on_actionAcquireImage_triggered()
+{
+    cap_image.create(&camera);
+
+    qDebug()<<"Start acquiring....";
+    camera.acquireImage(&cap_image);
+}
+
+void MainWindow::onFinishedAcquiring(bool result)
+{
+    qDebug()<<"Acquisizione finita";
+    if(result)
+    {
+        if(cap_image.getImage()->save("test.png", "PNG", 100)==false)
+        {
+            qDebug()<<"Image not saved";
+        }
+    }
+
+    cap_image.destroy();
 }

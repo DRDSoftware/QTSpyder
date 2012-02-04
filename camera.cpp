@@ -1,8 +1,10 @@
 #include "camera.h"
+#include "capturedimage.h"
 
 Camera::Camera()
 {
     cam=NULL;
+    image=NULL;
 }
 
 Camera::~Camera()
@@ -87,4 +89,28 @@ void Camera::printError()
     qDebug()<<"Errore esecuzione comando telcamera\n"<<"CyResult: "<<errInfo.mResult<<
               "\n"<<errInfo.mSourceFile<<":"<<errInfo.mSourceLine<<"\n"<<
               "Message: "<<errInfo.mMessage;
+}
+
+void Camera::acquireImage(CapturedImage *image)
+{
+    if(!isConnected())
+        return;
+
+    this->image=image;
+    QThread::start();
+}
+
+void Camera::run()
+{
+    CyGrabber &grabber=cam->GetGrabber();
+    if(grabber.Grab(CyChannel(0), image->getCyBuffer(), 0)==CY_RESULT_OK)
+    {
+        qDebug()<<"Acquisizione riuscita";
+        emit finishedAcquiring(true);
+    }
+    else
+    {
+        qDebug()<<"Acquisizione fallita!!!";
+        emit finishedAcquiring(false);
+    }
 }

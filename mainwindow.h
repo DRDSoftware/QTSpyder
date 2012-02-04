@@ -23,10 +23,11 @@
 #include <QMessageBox>
 #include <QtGui/QCloseEvent>
 #include <QTimer>
-#include <about.h>
-#include <wizard_1.h>
-#include <wizard_2.h>
-#include <camera.h>
+#include "about.h"
+#include "wizard_1.h"
+#include "wizard_2.h"
+#include "camera.h"
+#include "capturedimage.h"
 
 namespace Ui {
     class MainWindow;
@@ -53,7 +54,16 @@ private slots:
 
     void on_actionRestoreDefaultConfig_triggered();
 
-    void on_Timer_Refreshed();
+    void onTimerRefreshed();
+
+    void on_actionAcquireImage_triggered();
+
+    inline void on_singleCapture_clicked()
+    {
+        on_actionAcquireImage_triggered();
+    }
+
+    void onFinishedAcquiring(bool);
 
 protected:
     /// Lock the UI of the window
@@ -73,6 +83,10 @@ protected:
     void closeEvent(QCloseEvent *event);
     /// Save and Exit the program
     bool SaveAndExit();
+
+    /// Last captured image
+    CapturedImage cap_image;
+
 private:
     /// The main window of the program
     Ui::MainWindow *ui;

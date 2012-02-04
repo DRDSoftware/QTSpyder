@@ -3,9 +3,15 @@
 
 #include "cameraenumerator.h"
 #include <QDebug>
+#include <QThread>
 
-class Camera
+class CapturedImage;
+
+class Camera: public QThread
 {
+private:
+    Q_OBJECT
+
 public:
     Camera();
     virtual ~Camera();
@@ -26,17 +32,35 @@ public:
     float getTemperature();
 
     float getVoltage();
+
     unsigned long getSizeWidth();
 
     unsigned long getSizeHeight();
 
     unsigned long getPixelByteSize();
 
+    void acquireImage(CapturedImage *image);
+
+    /// Return True if the camera is acquiring an image
+    inline bool isAcquiring()
+    {
+        return isRunning();
+    }
+
+signals:
+    void finishedAcquiring(bool);
+
 protected:
+    void run();
+
     CCameraConnection conn;
     CSpyder3GigEInterface *cam;
 
     void printError();
+
+private:
+    /// Used to pass param to run method
+    CapturedImage *image;
 };
 
 #endif // CAMERA_H
