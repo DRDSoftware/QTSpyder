@@ -821,7 +821,7 @@ p, li { white-space: pre-wrap; }
              <item>
               <widget class="QLabel" name="temperature">
                <property name="text">
-                <string>00</string>
+                <string/>
                </property>
               </widget>
              </item>
@@ -848,7 +848,7 @@ p, li { white-space: pre-wrap; }
              <item>
               <widget class="QLabel" name="voltage">
                <property name="text">
-                <string>00</string>
+                <string/>
                </property>
               </widget>
              </item>

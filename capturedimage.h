@@ -18,6 +18,8 @@ public:
 
     void destroy();
 
+    bool save(const char *name);
+
     /// Return the the QImage object containing the image
     inline const QImage *getImage() const
     {

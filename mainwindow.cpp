@@ -267,7 +267,11 @@ void MainWindow::onFinishedAcquiring(bool result)
     qDebug()<<"Acquisizione finita";
     if(result)
     {
-        if(cap_image.getImage()->save("test.png", "PNG", 100)==false)
+        QImage image(cap_image.getCyBuffer().GetBuffer(), camera.getSizeWidth(), camera.getSizeHeight(), QImage::Format_Indexed8);
+
+        ui->label->setPixmap(QPixmap::fromImage(image, Qt::ThresholdDither | Qt::NoOpaqueDetection));
+
+        if(image.save("test.png")==false)
         {
             qDebug()<<"Image not saved";
         }

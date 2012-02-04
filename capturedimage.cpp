@@ -15,11 +15,11 @@ CapturedImage::~CapturedImage()
 
 void CapturedImage::create(Camera *cam)
 {
-    QVector<QRgb> colormap;
+    QVector<QRgb> colormap(256);
 
     for(int i=0; i<256; i++)
     {
-        colormap.push_back(0xFF000000 & ((unsigned char)(i)<<16) & ((unsigned char)(i)<<8) & (unsigned char)(i));
+        colormap.push_back(0xFF000000 | ((unsigned char)(i)<<16) | ((unsigned char)(i)<<8) | (unsigned char)(i));
     }
 
     width=cam->getSizeWidth();
@@ -44,4 +44,9 @@ void CapturedImage::destroy()
         qimage=NULL;
         created=false;
     }
+}
+
+bool CapturedImage::save(const char *name)
+{
+    return qimage->save(name, "PNG", 100);
 }
