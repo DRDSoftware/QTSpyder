@@ -19,19 +19,24 @@ void CapturedImage::create(Camera *cam)
 
     for(int i=0; i<256; i++)
     {
-        colormap.push_back(0xFF000000 | ((unsigned char)(i)<<16) | ((unsigned char)(i)<<8) | (unsigned char)(i));
+        colormap[i]=(0xFF000000 | (((unsigned char)(i))<<16) | (((unsigned char)(i))<<8) | ((unsigned char)(i)));
     }
 
     width=cam->getSizeWidth();
     height=cam->getSizeHeight();
     pixel_size=cam->getPixelByteSize();
 
+    qDebug()<<"Creata CapturedImage: "<<width<<"x"<<height<<"x"<<pixel_size*8;
+
     long size = width*height*pixel_size;
 
     unsigned char *data=new unsigned char[size];
-    buffer.SetBuffer(data, size);
     qimage=new QImage((const unsigned char *)data, width, height, QImage::Format_Indexed8);
     qimage->setColorTable(colormap);
+    delete [] data;
+
+    buffer.SetBuffer(qimage->bits(), size);
+
     created=true;
 }
 
@@ -40,7 +45,6 @@ void CapturedImage::destroy()
     if(created)
     {
         delete qimage;
-        delete [] buffer.GetBuffer();
         qimage=NULL;
         created=false;
     }
