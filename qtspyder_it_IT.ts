@@ -58,76 +58,76 @@ p, li { white-space: pre-wrap; }
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="286"/>
+        <location filename="mainwindow.ui" line="292"/>
         <source>Image Size</source>
         <translation>Dimensione immagine</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="296"/>
+        <location filename="mainwindow.ui" line="302"/>
         <source>Distance from the left side (px)</source>
         <translation>Distanza dal lato sinistro</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="324"/>
+        <location filename="mainwindow.ui" line="330"/>
         <source>Distance from the right side (px)</source>
         <translation>Distanza dal lato destro</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="380"/>
+        <location filename="mainwindow.ui" line="386"/>
         <source>TODO</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="419"/>
+        <location filename="mainwindow.ui" line="425"/>
         <source>Height</source>
         <translation>Altezza</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="535"/>
+        <location filename="mainwindow.ui" line="541"/>
         <source>Single capture</source>
         <translation>Cattura singola</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="545"/>
-        <location filename="mainwindow.ui" line="618"/>
+        <location filename="mainwindow.ui" line="551"/>
+        <location filename="mainwindow.ui" line="627"/>
         <source>Line fetching frequence (Hz)</source>
         <translation>Frequenza di cattura delle linee</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="585"/>
-        <location filename="mainwindow.ui" line="756"/>
+        <location filename="mainwindow.ui" line="594"/>
+        <location filename="mainwindow.ui" line="768"/>
         <source>Capture</source>
         <translation>Cattura</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="610"/>
-        <location filename="mainwindow.ui" line="930"/>
+        <location filename="mainwindow.ui" line="619"/>
+        <location filename="mainwindow.ui" line="951"/>
         <source>Continuous Capture</source>
         <translation>Cattura continua</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="654"/>
+        <location filename="mainwindow.ui" line="663"/>
         <source>Capture time (s)</source>
         <translation>Tempo di cattura (s)</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="670"/>
+        <location filename="mainwindow.ui" line="679"/>
         <source>Save output on disc</source>
         <translation>Salva output su disco</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="677"/>
+        <location filename="mainwindow.ui" line="686"/>
         <source>Path</source>
         <translation>Percorso</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="702"/>
-        <location filename="mainwindow.ui" line="741"/>
+        <location filename="mainwindow.ui" line="711"/>
+        <location filename="mainwindow.ui" line="750"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="711"/>
+        <location filename="mainwindow.ui" line="720"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -142,120 +142,119 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;                numero crescente di immagine)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="812"/>
-        <location filename="mainwindow.ui" line="839"/>
-        <source>00</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="797"/>
+        <location filename="mainwindow.ui" line="809"/>
         <source>Camera status</source>
         <translation>Status della camera</translation>
     </message>
     <message utf8="true">
-        <location filename="mainwindow.ui" line="805"/>
+        <location filename="mainwindow.ui" line="817"/>
         <source>Temperature [° C]:</source>
         <translation>Temperatura [° C]:</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="832"/>
+        <location filename="mainwindow.ui" line="844"/>
         <source>Voltage [V]:</source>
         <translation>Voltaggio [V]:</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="865"/>
+        <location filename="mainwindow.ui" line="877"/>
         <source>File</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="873"/>
+        <location filename="mainwindow.ui" line="885"/>
         <source>?</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="879"/>
+        <location filename="mainwindow.ui" line="891"/>
         <source>Camera</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="894"/>
+        <location filename="mainwindow.ui" line="906"/>
         <source>Exit</source>
         <translation>Esci</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="902"/>
+        <location filename="mainwindow.ui" line="914"/>
         <source>About QTSpyder...</source>
         <translation>Informazioni su...</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="905"/>
+        <location filename="mainwindow.ui" line="917"/>
         <source>About this program</source>
         <translation>Informazioni su questo programma</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="910"/>
+        <location filename="mainwindow.ui" line="922"/>
         <source>Connection Wizard...</source>
         <translation>Wizard di connessione...</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="920"/>
+        <location filename="mainwindow.ui" line="938"/>
         <source>Single Capture</source>
         <translation>Cattura singola</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="915"/>
+        <location filename="mainwindow.ui" line="930"/>
         <source>Disconnect</source>
         <translation>Disconnetti</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="925"/>
+        <location filename="mainwindow.ui" line="943"/>
         <source>Restore to default settings</source>
         <translation>Ripristina configurazione predefinita</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="897"/>
+        <location filename="mainwindow.ui" line="909"/>
         <source>Ctrl+Q</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="136"/>
+        <location filename="mainwindow.cpp" line="151"/>
         <source>The configuration has changed.</source>
         <translation>La configurazione è stata cambiata.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="137"/>
+        <location filename="mainwindow.cpp" line="152"/>
         <source>Do you want to save your changes?</source>
         <translation>Vuoi salvare le tue modifiche?</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="140"/>
+        <location filename="mainwindow.cpp" line="155"/>
         <source>Save</source>
         <translation>Salva</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="141"/>
+        <location filename="mainwindow.cpp" line="156"/>
         <source>Discard</source>
         <translation>Abbandona</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="142"/>
+        <location filename="mainwindow.cpp" line="157"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="153"/>
+        <location filename="mainwindow.cpp" line="168"/>
         <source>An error has occurred when saving the configuration.</source>
         <translation>Si è verificato un errore mentre si salvava la configurazione.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="156"/>
+        <location filename="mainwindow.cpp" line="171"/>
         <source>Don&apos;t save the config</source>
         <translation>Non salvare la configurazione</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="157"/>
+        <location filename="mainwindow.cpp" line="172"/>
         <source>Retry</source>
         <translation>Riprova</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="252"/>
+        <source>Disconnected from the camera</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -387,7 +386,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Premendo &amp;quot;Trova Telecamere&amp;quot;, il rpogramma cercherà tutte le telecamere attualmente connesse alle porte Ethernet del computer e ne stamperà l&apos;elenco; la ricerca può essere interrotta.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Premendo &amp;quot;Trova Telecamere&amp;quot;, il programma cercherà tutte le telecamere attualmente connesse alle porte Ethernet del computer e ne stamperà l&apos;elenco; la ricerca può essere interrotta.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Se la telecamera è attualmente collegata alla porta Ethernet ma essa non viene mostrata nella lista, provare a chiudere e riavviare l&apos;applicazione. Se il problema non viene risolto, controllare il collegamento della telecamera e di aver installato i driver Ethernet dal sito web di DALSA.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;/p&gt;
@@ -419,24 +418,54 @@ p, li { white-space: pre-wrap; }
         <translation>Esci</translation>
     </message>
     <message>
-        <location filename="wizard_2.cpp" line="55"/>
+        <location filename="wizard_2.cpp" line="52"/>
         <source>The Wizard didn&apos;t finish yet.</source>
         <translation>La procedura guidata non ha ancora finito.</translation>
     </message>
     <message>
-        <location filename="wizard_2.cpp" line="56"/>
+        <location filename="wizard_2.cpp" line="53"/>
         <source>Do you want to quit the Wizard?</source>
         <translation>Vuoi chiudere la procedura guidata?</translation>
     </message>
     <message>
-        <location filename="wizard_2.cpp" line="59"/>
+        <location filename="wizard_2.cpp" line="56"/>
         <source>Yes</source>
         <translation>Si</translation>
     </message>
     <message>
-        <location filename="wizard_2.cpp" line="60"/>
+        <location filename="wizard_2.cpp" line="57"/>
         <source>No</source>
         <translation>No</translation>
+    </message>
+    <message>
+        <location filename="wizard_2.cpp" line="82"/>
+        <source>Connecting to the selected camera...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="wizard_2.cpp" line="89"/>
+        <source>An error has occurred when connecting to the camera </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="wizard_2.cpp" line="92"/>
+        <source>Connection error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="wizard_2.cpp" line="97"/>
+        <source>Successfully connected to the camera </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="wizard_2.cpp" line="120"/>
+        <source>Searching for cameras...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="wizard_2.cpp" line="144"/>
+        <source>Search terminated.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
