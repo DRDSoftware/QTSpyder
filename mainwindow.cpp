@@ -51,6 +51,8 @@ MainWindow::MainWindow(QWidget *parent) :
     timer->start(30000);
 
     connect(&camera, SIGNAL(finishedAcquiring(bool)), this, SLOT(onFinishedAcquiring(bool)));
+
+    ShowWizard();
 }
 
 MainWindow::~MainWindow()
