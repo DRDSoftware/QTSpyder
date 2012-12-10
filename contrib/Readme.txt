@@ -1,7 +1,7 @@
 In this folder there should be 2 more folders named "include" and "lib" that
 contains all the files used to communicate with the camera.
 
-Fof licensing reason, we can't include those files but they are freely
+For licensing reason, we can't include those files but they are freely
 downloadable (previous free registration) from this page: 
 http://www.teledynedalsa.com/mv/products/cameradetail.aspx?partNumber=SG-14-01K40
 

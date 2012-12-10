@@ -1,5 +1,7 @@
 *.pro.user
 *.autosave
 *.qm
-contrib/include
-contrib/lib
+contrib/include/*
+!contrib/include/PLACEHOLDER
+contrib/lib/*
+!contrib/lib/PLACEHOLDER
