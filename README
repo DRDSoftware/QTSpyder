@@ -7,64 +7,51 @@
 * 1 *
 *****
 
-	Access the DALSA Spyder3 1k, 36 kHz GigE official website (available at the page:
-	http://www.teledynedalsa.com/mv/products/cameradetail.aspx?partNumber=SG-14-01K40)
-	and get a free account (you could need the camera serial number to do it).
-	Download the QuickCam GEV V 2.0 Setup and install it. That will include the drivers
-	for the	virtual network card and the original software.
-	Test the camera with the QuickCam program.
+Access the DALSA Spyder3 1k, 36 kHz GigE official website (available at the page:
+http://www.teledynedalsa.com/mv/products/cameradetail.aspx?partNumber=SG-14-01K40 )
+and get a free account (you could need the camera serial number to do it).
+Download the "QuickCam GEV V 2.0 Setup" and install it.  That will include the drivers
+for the virtual network card and the original software.
+Test the camera with the QuickCam program.
 
 
 *****
 * 2 *
 *****
 
-	Download and install the QT Libraries for VS 2010 from the site http://qt-project.org/downloads
-	Download and install the QT Creator from the same page.
+Download and install the "QT Libraries for VS 2010" and "QT Creator" from the site
+http://qt-project.org/downloads
 
 
 *****
 * 3 *
 *****
 
-	Access the folder "contrib" and follow the instructions in the Readme.txt to copy the required libraries.
+Access the folder "contrib" and follow the instructions in the Readme.txt to copy the
+required libraries.
 
 
 *****
 * 4 *
 *****
 
-	Copy "SpyderGigE.dll" and "Spyder3DLL.dll" in the root of the QTSpyder.
+Copy "SpyderGigE.dll" and "Spyder3DLL.dll" in the root of the QTSpyder.
 
 
 *****
 * 5 *
 *****
 
-	Open the project with the QTCreator and compile. It should work out of the box!
-	If not, feel free to open an Issue on GITHub, we will reply as soon as we can.
+Open the project with the QTCreator and compile. It should work out of the box!
+If not, feel free to open an Issue on GITHub, we will reply as soon as we can.
 
 
-DRD Software
+                                                                        DRD Software
 
 
 WARNING: 	"Spyder3DLL.dll" have a compilation error that will make the project
-			impossible to compile. It was compiled with Visual Studio 2005 and the linker
-			considered the int type equal to the long type; therefore the decorated names of
-			some of the functions have a "K" instead of an "I". We can't redistribute an
-			edited version of this file for copyright reasons. Sorry.
-			Anyway, the functions (and the binary-corrected version) are the following:
-
-			??0CyCameraLink@@IAE@PAVCyGrabber@@ABUCyCameraLimits@@_N2ABK222222222222E2E2@Z
-			--> becomes -->
-			??0CyCameraLink@@IAE@PAVCyGrabber@@ABUCyCameraLimits@@_N2ABI222222222222E2E2@Z
-
-			?GetSerialSelectFunction@CyCameraLink@@UBEKAAK@Z
-			--> becomes -->
-			?GetSerialSelectFunction@CyCameraLink@@UBEKAAI@Z
-
-			?SetSerialSelectFunction@CyCameraLink@@UAEKK@Z
-			--> becomes -->
-			?SetSerialSelectFunction@CyCameraLink@@UAEKI@Z
-
-			Remember that any modify to a DLL could be illegal where you live!
+			impossible to compile. It was compiled with Visual Studio 2005 and the 
+			linker considered the int type equal to the long type; therefore the
+			decorated names of some of the functions have a "K" instead of an "I".
+			We can't redistribute an edited version of this file for copyright reasons.
+			Sorry. Anyway, if you want to modify the DLL, read the DLL_fix.txt

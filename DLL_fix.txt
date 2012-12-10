@@ -1,0 +1,17 @@
+The bugged functions are the following:
+
+Original:
+??0CyCameraLink@@IAE@PAVCyGrabber@@ABUCyCameraLimits@@_N2ABK222222222222E2E2@Z
+Edited:
+??0CyCameraLink@@IAE@PAVCyGrabber@@ABUCyCameraLimits@@_N2ABI222222222222E2E2@Z
+
+Original:
+?GetSerialSelectFunction@CyCameraLink@@UBEKAAK@Z
+Edited:
+?GetSerialSelectFunction@CyCameraLink@@UBEKAAI@Z
+
+Original:
+?SetSerialSelectFunction@CyCameraLink@@UAEKK@Z
+Edited:
+?SetSerialSelectFunction@CyCameraLink@@UAEKI@Z
+
